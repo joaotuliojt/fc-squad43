@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require ("./database/configData");
 
 //Setando ejs como view engine
 app.set('view engine', 'ejs');
@@ -16,4 +17,5 @@ app.get('/login',require('./controllers/usuarioController').login);
 app.listen(8080, ()=>{
   console.log('App rodando!');
 });
+
 
