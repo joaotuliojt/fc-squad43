@@ -13,7 +13,12 @@ body {
   font-size: 1.6rem;
   font-family: "Metrophobic", sans-serif;
 }
+/*Classe para ateração do Titulo*/
+.title-desk {
+  font-weight: bold;
+}
 
+/*Classe reponsavel pelo divisor*/
 .divider {
   width: 100%;
   height: 0.2rem;
