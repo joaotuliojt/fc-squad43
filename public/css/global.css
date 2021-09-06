@@ -42,3 +42,9 @@ body {
   border-radius: 10rem;
   transition: 0.25s;
 }
+
+/*View port*/
+.main {
+  min-height: 100vh;
+  padding: 3rem;
+}
