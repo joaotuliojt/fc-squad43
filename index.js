@@ -1,21 +1,17 @@
 const express = require("express");
 const app = express();
-require ("./database/configData");
+const configData = require("./database/configData");
+const routes = require("./routes");
 
 //Setando ejs como view engine
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 //Define Pasta public como padão para documentos static
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 //Chamando rotas
-app.use('/',require('./routes/index'));
-
-app.get('/login',require('./controllers/usuarioController').login);
-
+app.use(routes);
 
 //Rodando servidor
-app.listen(8080, ()=>{
-  console.log('App rodando!');
+app.listen(8080, () => {
+  console.log("App rodando!");
 });
-
-

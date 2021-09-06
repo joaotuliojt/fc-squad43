@@ -1,10 +1,10 @@
 const router = require("express").Router();
+//Controllers
+const indexController = require("../controllers/indexController");
+const sedesController = require("../controllers/sedesController");
 
+router.get("/", indexController.load);
 
-router.get('/', (req, res) =>{
-  res.render('index');
-})
-
+router.get("/sedes", sedesController.load);
 
 module.exports = router;
-
