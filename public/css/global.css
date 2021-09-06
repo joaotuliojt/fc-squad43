@@ -20,3 +20,19 @@ body {
   background: #000;
   margin-top: 1rem;
 }
+
+/*Classe para alterar estilização dos botões*/
+
+.btn {
+  display: block;
+  margin: 7rem auto;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.6rem 6.2rem;
+  background: #c4c4c4;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.6rem;
+  border-radius: 10rem;
+  transition: 0.25s;
+}
