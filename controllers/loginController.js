@@ -1,4 +1,4 @@
-odule.exports = {
+module.exports = {
     load(req, res) {
       res.render("login");
     },

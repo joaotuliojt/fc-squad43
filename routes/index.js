@@ -10,7 +10,7 @@ const initialController = require("../controllers/initialController");
 //Rotas 
 router.get("/", indexController.load);
 
-router.get("/login", sedesController.load);
+router.get("/login", loginController.load);
 
 router.get("/sedes", sedesController.load);
 
