@@ -25,10 +25,11 @@ body {
 
 .btn {
   display: block;
+  width: 18.75rem;
   margin: 7rem auto;
   text-align: center;
   text-decoration: none;
-  padding: 1.6rem 6.2rem;
+  padding: 1.6rem 3.12rem;
   background: #c4c4c4;
   font-weight: bold;
   color: #000;
