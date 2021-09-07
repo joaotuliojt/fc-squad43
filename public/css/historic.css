@@ -1,6 +1,6 @@
 /* Estilizacao da biblioteca Swiper*/
 .swiper {
-    width: 32rem;
+    width: 80%;
     height: 2.3rem;
     margin-top: 2rem;
     --swiper-theme-color: #333333;
