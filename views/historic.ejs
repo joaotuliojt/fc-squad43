@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <title>FCallendar</title>
 </head>
 <body>
@@ -13,6 +14,23 @@
             <span class="title-desk">Meu Histórico</span>
             <div class="divider"></div>
         </section>
+        <div class="month swiper">
+            <div class="swiper-wrapper">
+                <div class="month swiper-slide">
+                    <p>FIZ</p>
+                </div>
+                <div class="month swiper-slide">
+                    <p>FOI</p>
+                </div>
+                <div class="month swiper-slide">
+                    <p>EU</p>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </main>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="historic.js"></script>
 </body>
 </html>
