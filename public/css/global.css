@@ -94,7 +94,9 @@ body {
   max-width: 250px;
   font-family: "Roboto", sans-serif;
   font-size: 32px;
-  color: #004033;
+  color: #000000;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .gauge__body {
@@ -106,6 +108,7 @@ body {
   border-top-left-radius: 100% 200%;
   border-top-right-radius: 100% 200%;
   overflow: hidden;
+  
 }
 
 .gauge__fill {
@@ -114,7 +117,7 @@ body {
   left: 0;
   width: inherit;
   height: 100%;
-  background: #009578;
+  background: #FF9900;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
@@ -129,6 +132,7 @@ body {
   top: 25%;
   left: 50%;
   transform: translateX(-50%);
+  
 
   /* Text */
   display: flex;

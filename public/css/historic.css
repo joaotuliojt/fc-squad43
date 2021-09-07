@@ -8,3 +8,17 @@
     text-align: center;
     font-family: "Roboto", sans-serif;
   }
+
+  /* Flexibilidade do velocimetro */
+  .speedometermonth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilizacao do span no final */
+  .end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
