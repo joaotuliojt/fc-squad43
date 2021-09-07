@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ body {
   width: 100%;
   height: 0.2rem;
   background: #000;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /*Classe para alterar estilização dos botões*/
