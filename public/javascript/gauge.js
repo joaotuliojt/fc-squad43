@@ -1,3 +1,4 @@
+// Responsavel pela transformacao do velocimetro
 const gaugeElement = document.querySelector(".gauge");
 
 function setGaugeValue(gauge, value) {
