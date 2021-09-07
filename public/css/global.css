@@ -64,18 +64,20 @@ body {
 .day {
   grid-column: 1/2;
   text-align: center;
-  height: 2rem;
-  margin-top: 0.8rem;
+  height: 0.8rem;
+  margin-top: 1.1rem;
+  border-right: 0.1rem solid #f9f8f8;
 }
 
 .week {
   grid-column: 1/2;
   text-align: center;
-  margin-top: 0rem;
+  margin-top: -0.5rem;
+  border-right: 0.1rem solid #f9f8f8;
 }
 
 .thirst {
-  margin-top: -1.3rem;
+  margin-top: -1.5rem;
   grid-column: 2/3;
   text-align: left;
   margin-left: 1rem;
