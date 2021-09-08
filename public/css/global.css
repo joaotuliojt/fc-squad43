@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -63,7 +63,8 @@ body {
   border-radius: 1.2rem;
   height: 7rem;
   margin-left: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .day {
@@ -108,7 +109,6 @@ body {
   border-top-left-radius: 100% 200%;
   border-top-right-radius: 100% 200%;
   overflow: hidden;
-  
 }
 
 .gauge__fill {
@@ -117,7 +117,7 @@ body {
   left: 0;
   width: inherit;
   height: 100%;
-  background: #FF9900;
+  background: #ff9900;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
@@ -132,7 +132,6 @@ body {
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  
 
   /* Text */
   display: flex;
@@ -140,4 +139,16 @@ body {
   justify-content: center;
   padding-bottom: 25%;
   box-sizing: border-box;
+}
+
+.percent {
+  font-size: 3rem;
+  color: grey;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+
+.occupation {
+  text-align: center;
+  font-weight: bold;
 }

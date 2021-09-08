@@ -12,7 +12,9 @@ function setGaugeValue(gauge, value) {
   }turn)`;
   gauge.querySelector(".gauge__cover").textContent = `${Math.round(
     value * 100
-  )}%`;
+  )}`;
+  let gaugeCover = gauge.querySelector(".gauge__cover");
+  gaugeCover.innerHTML += "<span class='percent'>%</span>";
 }
 
 function setGaugeValue2(gauge, value) {
@@ -25,7 +27,9 @@ function setGaugeValue2(gauge, value) {
   }turn)`;
   gauge.querySelector(".gauge__cover").textContent = `${Math.round(
     value * 100
-  )}%`;
+  )}`;
+  let gaugeCover = gauge.querySelector(".gauge__cover");
+  gaugeCover.innerHTML += "<span class='percent'>%</span>";
 }
 
 setGaugeValue(gaugeElement, 0.823);
