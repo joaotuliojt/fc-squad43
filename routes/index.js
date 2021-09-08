@@ -1,23 +1,37 @@
 const router = require("express").Router();
 //Controllers
-const indexController = require("../controllers/indexController");
-const loginController = require("../controllers/loginController");
-const sedesController = require("../controllers/sedesController");
-const historicController = require("../controllers/historicController");
-const reserveController = require("../controllers/reserveController");
-const initialController = require("../controllers/initialController");
 
-//Rotas 
-router.get("/", indexController.load);
+//Rotas
+router.get("/", (req, res) => {
+  res.render("index");
+});
 
-router.get("/login", loginController.load);
+router.get("/login", (req, res) => {
+  res.render("login");
+});
 
-router.get("/sedes", sedesController.load);
+router.get("/sedes", (req, res) => {
+  res.render("sedes");
+});
 
-router.get("/historic", historicController.load);
+router.get("/historic", (req, res) => {
+  res.render("historic");
+});
 
-router.get("/reserve", reserveController.load);
+router.get("/reserve", (req, res) => {
+  res.render("reserve");
+});
 
-router.get("/initial", initialController.load);
+router.get("/initial", (req, res) => {
+  res.render("initial");
+});
+
+router.get("/profile", (req, res) => {
+  res.render("profile");
+});
+
+router.get("/profile/edit", (req, res) => {
+  res.render("profileEdit");
+});
 
 module.exports = router;

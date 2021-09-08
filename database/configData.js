@@ -1,9 +1,8 @@
-/* const Mongoose = require('mongoose');
+const Sequelize = require("sequelize");
 
-Mongoose.connect("mongodb://localhost:27017/squad43",{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
-    console.log("Hello Word")
- });
- */
+const connection = new Sequelize("fcallendar", "root", "", {
+  host: "localhost",
+  dialect: "mysql",
+});
+
+module.exports = connection;
