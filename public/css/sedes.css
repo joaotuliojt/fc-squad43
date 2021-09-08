@@ -7,67 +7,10 @@
 section {
   margin-top: 4.8rem;
 }
-
-.occupation {
-  margin-top: 5.9rem;
-  position: relative;
+.speedometermonth {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-
-.occupation .percent {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-.occupation .percent svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-.occupation .percent svg circle {
-  width: 150px;
-  height: 150px;
-  fill: none;
-  stroke-width: 10;
-  transform: translate(5px, 5px);
-  stroke: #000;
-  stroke-dashoffset: 440;
-  stroke-dasharray: 440;
-  stroke-linecap: round;
-}
-.occupation .percent svg circle:nth-child(1) {
-  stroke-dashoffset: 0;
-  stroke: #bdbdbd;
-}
-.occupation .percent svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 82.3) / 100);
-  stroke: #ff9900;
-}
-.occupation .percent .number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.occupation .percent .number h2 {
-  font-size: 4rem;
-}
-.occupation .percent .number span {
-  font-size: 2.5rem;
-}
-.occupation .text {
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
 .btn:hover {
   filter: brightness(1.1);
 }
