@@ -124,12 +124,12 @@ body {
 }
 
 .gauge__cover {
-  width: 75%;
-  height: 150%;
+  width: 85%;
+  height: 170%;
   background: #ffffff;
   border-radius: 50%;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   
