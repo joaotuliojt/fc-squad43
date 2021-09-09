@@ -18,18 +18,36 @@
         </section>
         <div class="baseCalendar">
             <div class="calendar" id="calendar">
-    
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
-    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
-    <script  type="text/javascript" src="/javascript/calendar.js"></script>
-    <script type="text/javascript">
-        let calendar = new Calendar('calendar');
-        calendar.getElement().addEventListener('change', e => {
-            console.log(calendar.value().format('LLL'));
-        });
-    </script>
+        <div class="containerView">
+            <div class="containerTime">
+                <p class="day">30</p>
+                <p class="week">Seg</p>
+                <p class="thirst">Santos - SP</p>
+            </div>
+            <div class="containerTime">
+                <p class="day">23</p>
+                <p class="week">Seg</p>
+                <p class="thirst">Santos - SP</p>
+            </div>
+            <div class="containerTime">
+                <p class="day">12</p>
+                <p class="week">Qua</p>
+                <p class="thirst">Santos - SP</p>
+            </div>
+        </div>
     </main>
+                <!-- Javascript para o velocimetro -->
+                <script src="/javascript/gauge.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+                <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+                <script  type="text/javascript" src="/javascript/calendar.js"></script>
+                <script type="text/javascript">
+                    let calendar = new Calendar('calendar');
+                    calendar.getElement().addEventListener('change', e => {
+                        console.log(calendar.value().format('LLL'));
+                    });
+                </script>
 </body>
 </html>
