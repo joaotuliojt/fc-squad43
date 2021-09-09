@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/initial.css">
+  <link rel="stylesheet" href="/css/editProfile.css">
   <title>FCallendar</title>
 </head>
 
@@ -17,7 +17,25 @@
   </section>
 
   <main class="main">
+    <form action="">
+      <div class="input-field">
+        <input type="text" id="nome" required />
+        <label for="nome">Nome</label>
+      </div>
+      <h5>Unidades</h5>
+      <p>
+        <input type="radio" id="santos" name="radio-group" checked>
+        <label for="santos">Santos</label>
+      </p>
+      <p>
+        <input type="radio" id="sp" name="radio-group">
+        <label for="sp">São Paulo</label>
+      </p>
+      <h5>Data de nascimento</h5>
+      <input type="date" name="nascimento" id="date">
 
+      <button class="btn">Salvar</button>
+    </form>
   </main>
 
 </body>

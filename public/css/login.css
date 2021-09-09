@@ -26,7 +26,7 @@ form {
 .input-field:nth-child(2) {
   margin-bottom: 5rem;
 }
-label {
+.input-field label {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@ label {
   transition: 0.2s all;
   cursor: text;
 }
-input {
+.input-field input {
   width: 100%;
   border: 0;
   outline: 0;
@@ -45,8 +45,8 @@ input {
   color: #111;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
   font-size: 14px;
   top: -24px;
 }
