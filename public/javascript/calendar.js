@@ -26,13 +26,13 @@ class Calendar {
             <div class="calendar__body">
                 <div class="grid">
                     <div class="grid__header">
-                        <span class="grid__cell grid__cell--gh">Seg</span>
-                        <span class="grid__cell grid__cell--gh">Ter</span>
-                        <span class="grid__cell grid__cell--gh">Qua</span>
-                        <span class="grid__cell grid__cell--gh">Qui</span>
-                        <span class="grid__cell grid__cell--gh">Sex</span>
-                        <span class="grid__cell grid__cell--gh">Sáb</span>
-                        <span class="grid__cell grid__cell--gh">Dom</span>
+                        <span class="grid__cell grid__cell--gh">S</span>
+                        <span class="grid__cell grid__cell--gh">T</span>
+                        <span class="grid__cell grid__cell--gh">Q</span>
+                        <span class="grid__cell grid__cell--gh">Q</span>
+                        <span class="grid__cell grid__cell--gh">S</span>
+                        <span class="grid__cell grid__cell--gh">S</span>
+                        <span class="grid__cell grid__cell--gh">D</span>
                     </div>
                     <div class="grid__body">
 
