@@ -1,7 +1,8 @@
 const Sequelize = require("sequelize");
 const connection = require("./configData");
+const unidade = require("./unidadeData");
 
-module.exports = connection.define("usuario", {
+const usuario = connection.define("usuario", {
   nome: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -18,8 +19,12 @@ module.exports = connection.define("usuario", {
     type: Sequelize.INTEGER,
     allowNull: false,
     references: {
-      model: "unidade",
+      model: unidade,
       key: "id",
     },
   },
 });
+
+usuario.sync({ force: false });
+
+module.exports = usuario;

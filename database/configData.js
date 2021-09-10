@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 
-const connection = new Sequelize("fcallendar", "root", "", {
+const connection = new Sequelize("fcallendar_2", "root", "", {
   host: "localhost",
- dialect: "mysql",
+  dialect: "mysql",
 });
 
 module.exports = connection;

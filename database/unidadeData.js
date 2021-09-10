@@ -1,9 +1,13 @@
 const Sequelize = require("sequelize");
 const connection = require("./configData");
 
-module.exports = connection.define("unidade", {
+const unidade = connection.define("unidade", {
   nome: {
     type: Sequelize.STRING,
     allowNull: false,
   },
 });
+
+unidade.sync({ force: false });
+
+module.exports = unidade;

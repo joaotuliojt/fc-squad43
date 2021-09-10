@@ -3,6 +3,9 @@ const app = express();
 const configData = require("./database/configData");
 const routes = require("./routes");
 
+app.use(express.urlencoded());
+app.use(express.json());
+
 configData
   .authenticate()
   .then(() => {

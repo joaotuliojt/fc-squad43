@@ -13,19 +13,20 @@
 <body>
   <main class="main">
     <div class="logo"></div>
-    <form action="">
+    <form action="/login" method="POST">
       <div class="input-field">
-        <input type="email" id="email" required />
+        <input type="email" id="email" name="email" required />
         <label for="email">Email:</label>
       </div>
 
       <div class="input-field">
-        <input type="password" id="senha" required />
+        <input type="password" id="senha" name="password" required />
         <label for="senha">Senha:</label>
       </div>
+
+      <a href="#" class="forget">Esqueceu a senha?</a>
+      <button class="btn">Enviar</button>
     </form>
-    <a href="#" class="forget">Esqueceu a senha?</a>
-    <a class="btn"> Entrar</a>
   </main>
 </body>
 
