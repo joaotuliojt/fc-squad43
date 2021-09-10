@@ -5,14 +5,17 @@ const Reserva = require("../database/reservaData");
 const Usuario = require("../database/userData");
 
 const session = require("express-session");
+const flash = require("connect-flash");
 
 router.use(
   session({
-    secret: "Keep it secret",
-    name: "sessionID",
+    secret: "senha123",
+    resave: true,
     saveUninitialized: false,
   })
 );
+
+router.use(flash());
 
 //Rotas
 router.get("/", (req, res) => {
@@ -20,7 +23,12 @@ router.get("/", (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  res.render("login");
+  if (req.session.user) {
+    let nome = req.session.user.nome;
+    res.redirect("initial", { nome }, (err, html) => {});
+  } else {
+    res.render("login");
+  }
 });
 
 router.post("/login", (req, res) => {
@@ -31,12 +39,21 @@ router.post("/login", (req, res) => {
     where: { email, senha },
   }).then((user) => {
     if (user) {
-      req.session.login = user.id;
-      res.render("initial", { nome: user.nome });
+      req.session.user = user;
+      res.redirect("initial");
     } else {
       res.render("login");
     }
   });
+});
+
+router.get("/initial", (req, res) => {
+  if (req.session.user) {
+    let nome = req.session.user.nome;
+    res.render("initial", { nome });
+  } else {
+    res.redirect("login");
+  }
 });
 
 router.get("/sedes", (req, res) => {
@@ -49,15 +66,6 @@ router.get("/historic", (req, res) => {
 
 router.get("/reserve", (req, res) => {
   res.render("reserve");
-});
-
-router.get("/initial", (req, res) => {
-  console.log(req.session.login);
-  if (req.session.login) {
-    res.render("initial");
-  } else {
-    res.render("login");
-  }
 });
 
 router.get("/profile", (req, res) => {
