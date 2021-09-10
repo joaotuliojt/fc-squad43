@@ -47,6 +47,7 @@
             <a href="#close" title="Close" class="close">Confirmar</a>
           </div>
         </div>
+        <h1 id="t2">olw</h1>
           
     </main>
                 <!-- Javascript para o velocimetro -->
@@ -57,7 +58,7 @@
                 <script type="text/javascript">
                     let calendar = new Calendar('calendar');
                     calendar.getElement().addEventListener('change', e => {
-                        console.log(calendar.value().format('LLL'));
+                        t2.firstChild.nodeValue =(calendar.value().format('LLL'));
                     });
                 </script>
 </body>
