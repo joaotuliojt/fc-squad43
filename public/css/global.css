@@ -43,6 +43,7 @@ body {
   font-size: 1.6rem;
   border-radius: 10rem;
   transition: 0.25s;
+  border: none;
 }
 
 /*View port*/
