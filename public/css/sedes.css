@@ -1,7 +1,8 @@
 .block {
-  width: 18.4rem;
+  width: 18rem;
   height: 7.4rem;
-  background-color: #c4c4c4;
+  background: url("/img/FCallendar_logo.svg") no-repeat;
+  background-size: cover;
 }
 
 section {
