@@ -1,5 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Metrophobic&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@font-face {
+  font-family: Metropolis;
+  src: url("/fonts/Metropolis-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url("/fonts/Metropolis-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url("/fonts/Metropolis-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Metropolis;
+  src: url("/fonts/Metropolis-SemiBold.otf");
+  font-weight: 500;
+}
+
 :root {
   --primary-color: rgb(254, 68, 0);
   --secondary-color: #36357e;
@@ -18,7 +39,7 @@ html {
 
 body {
   font-size: 2rem;
-  font-family: "Metrophobic", sans-serif;
+  font-family: "Metropolis", sans-serif;
 }
 /*Classe para ateração do Titulo*/
 .title-desk {
