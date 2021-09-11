@@ -160,3 +160,14 @@ body {
   position: absolute;
   top: -100px;
 }
+
+.title-desk {
+  border: none;
+  background: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: -0.5rem;
+}
+ .options {
+  background: #ffffff;
+  color: black;
+ }
