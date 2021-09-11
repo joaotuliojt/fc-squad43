@@ -16,7 +16,9 @@
     <div class="profile__img"></div>
   </section>
   <div class="call">
-    <h3>Olá, <%= nome %>
+    <h3>Olá, <span class="cl-orange">
+        <%= nome %>
+      </span>
     </h3>
     <p>O que deseja fazer?</p>
   </div>
@@ -24,27 +26,27 @@
     <div class="options">
 
       <div class="option">
-        <a href="/historic">
+        <a href="/historic" title="Ver minha agenda">
           <div class="circle"></div>
           <span>Agenda</span>
         </a>
       </div>
 
       <div class="option">
-        <a href="/reserve">
+        <a href="/reserve" title="Fazer uma reserva">
           <div class="circle"></div>
           <span>Reservar</span>
         </a>
       </div>
 
       <div class="option">
-        <a href="/sedes">
+        <a href="/sedes" title="Sedes">
           <div class="circle"></div>
           <span>Sedes</span>
         </a>
       </div>
       <div class="option">
-        <a href="/profile">
+        <a href="/profile" title="Ver o meu perfil">
           <div class="circle"></div>
           <span>Perfil</span>
         </a>
