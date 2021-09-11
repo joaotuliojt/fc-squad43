@@ -1,64 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/reserve.css">
-    <link rel="stylesheet" href="/css/calendar.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/reserve.css">
+  <link rel="stylesheet" href="/css/calendar.css">
 
-    <title>FCallendar</title>
+  <title>FCallendar</title>
 </head>
-<body>
-    <main class="main">
-        <section>
-            <span class="title-desk">Unidade de Santos</span>
-            <div class="divider"></div>
-        </section>
-        <div class="baseCalendar">
-            <div class="calendar" id="calendar">
-            </div>
-        </div>
-        <div class="containerView">
-            <div class="containerTime">
-                <p class="day">30</p>
-                <p class="week">Seg</p>
-                <p class="thirst">Santos - SP</p>
-            </div>
-            <div class="containerTime">
-                <p class="day">23</p>
-                <p class="week">Seg</p>
-                <p class="thirst">Santos - SP</p>
-            </div>
-            <div class="containerTime">
-                <p class="day">12</p>
-                <p class="week">Qua</p>
-                <p class="thirst">Santos - SP</p>
-            </div>
-        </div>
-        <a class="btn" href="#openModal">Confirmar</a>
 
-        <div id="openModal" class="modalDialog">
-          <div>
-            <img class="imgfeed" src="" alt="Uma logo">
-            <h3 class="Feedback">Frase Feedback</h3>
-            <p class="phrase">Frase para encaminhar para a agenda</p>
-            <a href="#close" title="Close" class="close">Confirmar</a>
-          </div>
-        </div>
-        <h1 id="t2">Esse</h1>
-          
-    </main>
-                <!-- Javascript para o velocimetro -->
-                <script src="/javascript/gauge.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
-                <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
-                <script  type="text/javascript" src="/javascript/calendar.js"></script>
-                <script type="text/javascript">
-                    let calendar = new Calendar('calendar');
-                    calendar.getElement().addEventListener('change', e => {
-                        t2.firstChild.nodeValue = (calendar.value().format('DD'));
-                    });
-                </script>
+<body>
+  <main class="main">
+
+    <section>
+      <form action="/reserve" method="POST">
+        <select class="title-desk" name="unidade" id="">
+          <option value="1">São Paulo</option>
+          <option value="2">Santos</option>
+        </select>
+        <input class="hide" type="date" name="data" id="t2">
+
+        <div class="divider"></div>
+    </section>
+    <div class="baseCalendar">
+      <div class="calendar" id="calendar">
+      </div>
+    </div>
+    <div class="containerView">
+      <div class="containerTime">
+        <p class="day">30</p>
+        <p class="week">Seg</p>
+        <p class="thirst">Santos - SP</p>
+      </div>
+      <!-- <div class="containerTime">
+        <p class="day">23</p>
+        <p class="week">Seg</p>
+        <p class="thirst">Santos - SP</p>
+      </div>
+      <div class="containerTime">
+        <p class="day">12</p>
+        <p class="week">Qua</p>
+        <p class="thirst">Santos - SP</p>
+      </div> -->
+    </div>
+    <!-- <a class="btn" href="#openModal">Confirmar</a> -->
+    <button class="btn" type="submit">Confirmar</button>
+
+    <div id="openModal" class="modalDialog">
+      <div>
+        <img class="imgfeed" src="" alt="Uma logo">
+        <h3 class="Feedback">Frase Feedback</h3>
+        <p class="phrase">Frase para encaminhar para a agenda</p>
+        <a href="#close" title="Close" class="close">Confirmar</a>
+
+      </div>
+    </div>
+
+    </form>
+  </main>
+  <!-- Javascript para o velocimetro -->
+  <script src="/javascript/gauge.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+  <script type="text/javascript" src="/javascript/calendar.js"></script>
+  <script type="text/javascript">
+    let calendar = new Calendar('calendar');
+    let inputDate = document.querySelector('#t2')
+    calendar.getElement().addEventListener('change', e => {
+      inputDate.value = (calendar.value().format('YYYY-MM-DD'));
+    });
+  </script>
+</body>
+
 </html>

@@ -153,3 +153,10 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+}

@@ -1,55 +1,59 @@
+.title-desk {
+  width: 100%;
+  padding: 0.6rem;
+}
 .modalDialog {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99999;
-    opacity: 0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
-    pointer-events: none;
-  }
-  .modalDialog:target {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .modalDialog > div {
-    width: 90%;
-    height: 40rem;
-    position: relative;
-    margin: 10% auto;
-    padding: 4rem;
-    border-radius: 1.2rem;
-    background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 90%;
+  height: 40rem;
+  position: relative;
+  margin: 10% auto;
+  padding: 4rem;
+  border-radius: 1.2rem;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  }
-  .close {
-    display: flex;
-    width: 100%;
-    margin: 7rem auto;
-    justify-content: center;
-    text-decoration: none;
-    padding: 1.6rem 3.12rem;
-    background: #2b4bf2;
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 1.6rem;
-    border-radius: 1.2rem;
-    transition: 0.25s;
-    margin-top: 0rem;
-  }
+}
+.close {
+  display: flex;
+  width: 100%;
+  margin: 7rem auto;
+  justify-content: center;
+  text-decoration: none;
+  padding: 1.6rem 3.12rem;
+  background: #2b4bf2;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  transition: 0.25s;
+  margin-top: 0rem;
+}
 
-  .phrase {
-      font-size: 1.7rem;
-      margin-top: 3rem;
-      margin-bottom: 3rem;
-  }
+.phrase {
+  font-size: 1.7rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 
-  .imgfeed {
-      margin-bottom: 3rem;
-      margin-top: 12rem;
-  }
+.imgfeed {
+  margin-bottom: 3rem;
+  margin-top: 12rem;
+}

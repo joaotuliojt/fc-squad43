@@ -68,6 +68,10 @@ router.get("/reserve", (req, res) => {
   res.render("reserve");
 });
 
+router.post("/reserve", (req, res) => {
+  res.redirect("/reserve#openModal");
+});
+
 router.get("/profile", (req, res) => {
   res.render("profile");
 });
