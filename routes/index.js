@@ -116,6 +116,7 @@ router.post("/profile/edit", (req, res) => {
       { where: { id: req.session.user.id } }
     ).then(() => {
       req.session.user.nome = nome;
+      req.session.user.unidade = unidade;
       res.redirect("/profile");
     });
   }
