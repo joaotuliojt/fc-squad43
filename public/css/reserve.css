@@ -57,3 +57,18 @@
   margin-bottom: 3rem;
   margin-top: 12rem;
 }
+
+.containerTime {
+  margin-top: -0.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.containerTime.active {
+  visibility: visible;
+  opacity: 1;
+}
+.btn {
+  margin-top: -0.3rem;
+}

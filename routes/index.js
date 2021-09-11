@@ -78,11 +78,11 @@ router.get("/historic", (req, res) => {
 });
 
 router.get("/reserve", (req, res) => {
-  if (req.session.user) {
+  //if (req.session.user) {
     res.render("reserve");
-  } else {
-    res.redirect("/login");
-  }
+  //} else {
+  //  res.redirect("/login");
+  //}
 });
 
 router.post("/reserve", (req, res) => {

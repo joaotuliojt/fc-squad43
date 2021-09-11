@@ -84,6 +84,10 @@ body {
   border-right: 0.1rem solid #f9f8f8;
 }
 
+.week::first-letter {
+  text-transform: uppercase;
+}
+
 .thirst {
   margin-top: -1.5rem;
   grid-column: 2/3;
