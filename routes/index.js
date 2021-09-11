@@ -57,15 +57,27 @@ router.get("/initial", (req, res) => {
 });
 
 router.get("/sedes", (req, res) => {
-  res.render("sedes");
+  if (req.session.user) {
+    res.render("sedes");
+  } else {
+    res.redirect("/login");
+  }
 });
 
 router.get("/historic", (req, res) => {
-  res.render("historic");
+  if (req.session.user) {
+    res.render("historic");
+  } else {
+    res.redirect("/login");
+  }
 });
 
 router.get("/reserve", (req, res) => {
-  res.render("reserve");
+  if (req.session.user) {
+    res.render("reserve");
+  } else {
+    res.redirect("/login");
+  }
 });
 
 router.post("/reserve", (req, res) => {
@@ -73,11 +85,19 @@ router.post("/reserve", (req, res) => {
 });
 
 router.get("/profile", (req, res) => {
-  res.render("profile");
+  if (req.session.user) {
+    res.render("profile", { user: req.session.user });
+  } else {
+    res.redirect("/login");
+  }
 });
 
 router.get("/profile/edit", (req, res) => {
-  res.render("profileEdit");
+  if (req.session.user) {
+    res.render("profileEdit", { user: req.session.user });
+  } else {
+    res.redirect("/login");
+  }
 });
 
 module.exports = router;

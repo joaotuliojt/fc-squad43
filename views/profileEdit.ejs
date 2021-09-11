@@ -19,22 +19,19 @@
   <main class="main">
     <form action="">
       <div class="input-field">
-        <input type="text" id="nome" required />
+        <input value="<%=user.nome%>" type="text" id="nome" />
         <label for="nome">Nome</label>
       </div>
       <h5>Unidades</h5>
       <p>
-        <input type="radio" id="santos" name="radio-group" checked>
+        <input value="2" type="radio" id="santos" name="radio-group" checked>
         <label for="santos">Santos</label>
       </p>
       <p>
-        <input type="radio" id="sp" name="radio-group">
+        <input value="1" type="radio" id="sp" name="radio-group">
         <label for="sp">São Paulo</label>
       </p>
-      <h5>Data de nascimento</h5>
-      <input type="date" name="nascimento" id="date">
-
-      <button class="btn">Salvar</button>
+      <button type="submit" class="btn">Salvar</button>
     </form>
   </main>
 
