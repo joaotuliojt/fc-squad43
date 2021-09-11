@@ -30,6 +30,13 @@
   text-align: center;
   display: inline-block;
 }
+.links-container {
+  display: inline-block;
+}
+.links-container:hover a {
+  transition: 0.25s;
+  color: var(--primary-color);
+}
 .option a {
   text-decoration: none;
   color: #000;
@@ -42,4 +49,5 @@
   height: 11rem;
   margin: 0 auto;
   background: #c4c4c4;
+  display: block;
 }
