@@ -17,18 +17,18 @@
   </section>
 
   <main class="main">
-    <form action="">
+    <form action="/profile/edit" method="POST">
       <div class="input-field">
-        <input value="<%=user.nome%>" type="text" id="nome" />
+        <input value="<%=user.nome%>" type="text" name="nome" id="nome" />
         <label for="nome">Nome</label>
       </div>
       <h5>Unidades</h5>
       <p>
-        <input value="2" type="radio" id="santos" name="radio-group" checked>
+        <input value="2" type="radio" id="santos" name="radio_group" checked>
         <label for="santos">Santos</label>
       </p>
       <p>
-        <input value="1" type="radio" id="sp" name="radio-group">
+        <input value="1" type="radio" id="sp" name="radio_group">
         <label for="sp">São Paulo</label>
       </p>
       <button type="submit" class="btn">Salvar</button>

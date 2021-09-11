@@ -17,6 +17,11 @@ router.use(
 
 router.use(flash());
 
+router.get("/sair", (req, res) => {
+  req.session.user = undefined;
+  res.redirect("/login");
+});
+
 //Rotas
 router.get("/", (req, res) => {
   res.redirect("login");
@@ -81,6 +86,8 @@ router.get("/reserve", (req, res) => {
 });
 
 router.post("/reserve", (req, res) => {
+  let data = req.body.data;
+  let idUnidade = req.body.unidade;
   res.redirect("/reserve#openModal");
 });
 
@@ -97,6 +104,20 @@ router.get("/profile/edit", (req, res) => {
     res.render("profileEdit", { user: req.session.user });
   } else {
     res.redirect("/login");
+  }
+});
+
+router.post("/profile/edit", (req, res) => {
+  let nome = req.body.nome;
+  let unidade = req.body.radio_group;
+  if (req.session.user) {
+    Usuario.update(
+      { nome: nome, unidade: unidade },
+      { where: { id: req.session.user.id } }
+    ).then(() => {
+      req.session.user.nome = nome;
+      res.redirect("/profile");
+    });
   }
 });
 
