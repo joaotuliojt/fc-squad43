@@ -46,8 +46,9 @@ body {
   font-weight: bold;
   border: none;
   background: #ffffff;
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin-bottom: -0.5rem;
+  font-weight: 700;
 }
 
 /*Classe reponsavel pelo divisor*/
