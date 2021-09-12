@@ -70,19 +70,19 @@ router.get("/sedes", (req, res) => {
 });
 
 router.get("/historic", (req, res) => {
-  if (req.session.user) {
+ // if (req.session.user) {
     res.render("historic");
-  } else {
-    res.redirect("/login");
-  }
+ // } else {
+ //   res.redirect("/login");
+ // }
 });
 
 router.get("/reserve", (req, res) => {
-  //if (req.session.user) {
+  if (req.session.user) {
     res.render("reserve");
-  //} else {
-  //  res.redirect("/login");
-  //}
+  } else {
+  res.redirect("/login");
+  }
 });
 
 router.post("/reserve", (req, res) => {
