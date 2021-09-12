@@ -59,7 +59,7 @@
 }
 
 .containerTime {
-  margin-top: -0.5rem;
+  margin-top: -0.3rem;
   visibility: hidden;
   opacity: 0;
   transition: 0.25s;

@@ -44,6 +44,10 @@ body {
 /*Classe para ateração do Titulo*/
 .title-desk {
   font-weight: bold;
+  border: none;
+  background: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: -0.5rem;
 }
 
 /*Classe reponsavel pelo divisor*/
@@ -196,12 +200,6 @@ body {
   top: -100px;
 }
 
-.title-desk {
-  border: none;
-  background: #ffffff;
-  font-size: 1.6rem;
-  margin-bottom: -0.5rem;
-}
 .options {
   background: #ffffff;
   color: black;
