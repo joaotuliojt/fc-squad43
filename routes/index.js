@@ -73,7 +73,7 @@ router.get("/historic", (req, res) => {
   if (req.session.user) {
     res.render("historic");
   } else {
-   res.redirect("/login");
+    res.redirect("/login");
   }
 });
 
@@ -81,14 +81,27 @@ router.get("/reserve", (req, res) => {
   if (req.session.user) {
     res.render("reserve");
   } else {
-  res.redirect("/login");
+    res.redirect("/login");
   }
 });
 
 router.post("/reserve", (req, res) => {
   let data = req.body.data;
   let idUnidade = req.body.unidade;
-  res.redirect("/reserve#openModal");
+  let limiteUnidade;
+  let user = req.session.user;
+
+  Unidade.findOne({ where: { id: idUnidade }, raw: true }).then((n) => {
+    limiteUnidade = Math.round(n.capacidade * 0.4);
+  });
+
+  Reserva.count({ where: { data: { data }, id: { idUnidade } } }).then((c) => {
+    if (c <= limiteUnidade) {
+      Reserva.create({ data, id_usuario: user.id }).then(() => {
+        res.redirect("/reserve#openModal");
+      });
+    }
+  });
 });
 
 router.get("/profile", (req, res) => {

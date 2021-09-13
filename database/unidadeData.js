@@ -6,6 +6,10 @@ const unidade = connection.define("unidade", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  capacidade: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+  },
 });
 
 unidade.sync({ force: false });

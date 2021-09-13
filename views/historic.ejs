@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/historic.css">
-    <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
-    <!-- Estilo Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <title>FCallendar</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/historic.css">
+  <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
+  <!-- Estilo Swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <title>FCallendar</title>
 </head>
+
 <body>
-    <main class="main">
-        <section>
-            <span class="title-desk">Meu Histórico</span>
-            <div class="divider"></div>
-        </section>
-        <!-- Utilizacao da biblioteca para fazer o carrocel -->
-        <div class="month swiper">
-            <div class="swiper-wrapper">
-                <div class="month swiper-slide">
-                    <p>Janeiro</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Fevereiro</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Março</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Abril</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Maio</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Junho</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Julho</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Agosto</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Setembro</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Outubro</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Novembro</p>
-                </div>
-                <div class="month swiper-slide">
-                    <p>Dezembro</p>
-                </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+  <main class="main">
+    <section>
+      <span class="title-desk">Meu Histórico</span>
+      <div class="divider"></div>
+    </section>
+    <!-- Utilizacao da biblioteca para fazer o carrocel -->
+    <!-- <div class="month swiper">
+      <div class="swiper-wrapper">
+        <div class="month swiper-slide">
+          <p>Janeiro</p>
         </div>
-        <!-- responsavel por mostrar dia, semana e sede -->
-        <div class="containerView">
-            <div class="containerTime">
-                <p class="day">30</p>
-                <p class="week">Seg</p>
-                <p class="thirst">Santos - SP</p>
-            </div>
-            <div class="containerTime">
+        <div class="month swiper-slide">
+          <p>Fevereiro</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Março</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Abril</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Maio</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Junho</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Julho</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Agosto</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Setembro</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Outubro</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Novembro</p>
+        </div>
+        <div class="month swiper-slide">
+          <p>Dezembro</p>
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div> -->
+    <div class="month-select">
+      <select name="months" class="months">
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+      <div class="prev"></div>
+      <div class="next"></div>
+    </div>
+    <!-- responsavel por mostrar dia, semana e sede -->
+    <div class="containerView">
+      <div class="containerTime">
+        <p class="day">30</p>
+        <p class="week">Seg</p>
+        <p class="thirst">Santos - SP</p>
+      </div>
+      <!--  <div class="containerTime">
                 <p class="day">23</p>
                 <p class="week">Seg</p>
                 <p class="thirst">Santos - SP</p>
@@ -76,27 +96,28 @@
                 <p class="day">12</p>
                 <p class="week">Qua</p>
                 <p class="thirst">Santos - SP</p>
-            </div>
+            </div> -->
+    </div>
+    <span class="title-desk">Relatório do mês</span>
+    <!-- <div class="speedometermonth">
+      <div class="gauge">
+        <div class="gauge__body">
+          <div class="gauge__fill"></div>
+          <div class="gauge__cover"></div>
         </div>
-        <span class="title-desk">Relatório do mês</span>
-        <div class="speedometermonth">
-            <div class="gauge">
-                <div class="gauge__body">
-                  <div class="gauge__fill"></div>
-                  <div class="gauge__cover"></div>
-                </div>
-              </div>
-        </div>
-        <span class="title-desk end">em Home Office</span>
-        <p class="question">Que tal reservar um dia no escritório?</p>
-    </main>
-    <!-- Biblioteca Swiper -->>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+      </div>
+    </div>
+    <span class="title-desk end">em Home Office</span>
+    <p class="question">Que tal reservar um dia no escritório?</p> -->
+  </main>
+  <!-- Biblioteca Swiper -->>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-    <!-- Javascript para o Swiper -->
-    <script src="/javascript/historic.js"></script>
-    
-     <!-- Javascript para o velocimetro -->
-     <script src="/javascript/gauge.js"></script>
+  <!-- Javascript para o Swiper -->
+  <script src="/javascript/historic.js"></script>
+
+  <!-- Javascript para o velocimetro -->
+  <script src="/javascript/gauge.js"></script>
 </body>
+
 </html>

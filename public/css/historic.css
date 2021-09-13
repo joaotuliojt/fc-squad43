@@ -1,33 +1,69 @@
 /* Estilizacao da biblioteca Swiper*/
 .swiper {
-    width: 80%;
-    height: 2.3rem;
-    margin-top: 2rem;
-    --swiper-theme-color: #333333;
-    --swiper-navigation-size: 2rem;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-  }
+  width: 80%;
+  height: 2.3rem;
+  margin-top: 2rem;
+  --swiper-theme-color: #333333;
+  --swiper-navigation-size: 2rem;
+  text-align: center;
+}
 
-  /* Flexibilidade do velocimetro */
-  .speedometermonth{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Flexibilidade do velocimetro */
+.speedometermonth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* Estilizacao do span no final */
-  .end {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #1D2125;
-    font-size: 2.5rem;
-  }
+/* Estilizacao do span no final */
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1d2125;
+  font-size: 2.5rem;
+}
 
-  .question {
-    color: #FF9900;
-    font-size: 1.8rem;
-    text-align: center;
-    margin-top: 1rem;
-  }
+.question {
+  color: #ff9900;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.month-select {
+  position: relative;
+}
+.month-select > .months {
+  width: 100%;
+}
+
+.months {
+  margin-top: 0.8rem;
+  border: none;
+  text-align-last: center;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  font-size: 1.8rem;
+  height: 4rem;
+}
+.prev,
+.next {
+  width: 1.4rem;
+  height: 1.4 rem;
+  box-shadow: -2px 2px 0 black;
+  position: absolute;
+  top: 50%;
+}
+
+.prev {
+  left: 0;
+  transform: rotate(45deg) translateY(-50%);
+}
+.next {
+  right: 0;
+  transform: rotate(-135deg) translateY(50%);
+}
