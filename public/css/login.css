@@ -1,58 +1,93 @@
+body {
+  position: relative;
+}
+.bg-icon {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.l-top {
+  left: 0;
+  top: 0;
+  background-image: url("/img/cube-1.svg");
+  background-position: left;
+}
+.r-top {
+  right: 0;
+  top: -1.6rem;
+  background-image: url("/img/toroid-1.svg");
+}
+
+.r-middle {
+  right: 0;
+  top: 50%;
+  background-image: url("/img/pill-1.svg");
+  background-position: right;
+}
+
+.l-botton {
+  left: 0;
+  bottom: 20%;
+  background-image: url("/img/pill-2.svg");
+  background-position: left;
+}
+.r-botton {
+  right: 0;
+  bottom: 0;
+  background-image: url("/img/cube-2.svg");
+  background-position: right;
+}
+
+.b-botton {
+  bottom: 0;
+  left: 10%;
+  background-image: url("/img/sphere.svg");
+  background-position: bottom;
+}
+
 .main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 form {
-  width: 100%;
+  width: 80%;
+  margin-bottom: 15rem;
 }
-.logo {
-  width: 27rem;
-  height: 11rem;
-  background: url("/img/FCallendar_logo.svg") no-repeat center;
-  margin-bottom: 5rem;
-  justify-self: flex-start;
+form label {
+  text-align: left;
+  font-size: 1.8rem;
+  color: #ff8e65;
+}
+.saly-icon {
+  background: url("/img/saly-icon.svg");
+  background-size: cover;
+  background-position: center;
+  width: 34rem;
+  height: 34rem;
+  margin-top: 7rem;
 }
 
-.input-field {
+.input-wrapper {
   position: relative;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid var(--primary-color);
+  margin-bottom: 5.7rem;
   width: 100%;
-  max-width: 60rem;
-  height: 44px;
-  line-height: 44px;
-  margin-bottom: 4rem;
 }
-.input-field:nth-child(2) {
-  margin-bottom: 5rem;
-}
-.input-field label {
-  position: absolute;
-  top: 0;
-  left: 0;
+.input-wrapper > input {
+  border: none;
   width: 100%;
-  color: #000;
-  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
-  cursor: text;
-}
-.input-field input {
-  width: 100%;
-  border: 0;
+  height: 3rem;
   outline: none;
-  padding: 0.5rem 0;
-  border-bottom: 2px solid #000;
-  box-shadow: none;
-  color: #111;
 }
-
-.input-clas:focus ~ .input-label,
-.input-clas:not(:placeholder-shown).input-clas:not(:focus) ~ .input-label {
-  color: var(--primary-color);
-  font-size: 14px;
-  top: -24px;
-}
-
 .forget {
   font-size: 1.9rem;
   text-decoration: none;
@@ -64,15 +99,9 @@ form {
 .forget:hover {
   color: var(--primary-color);
 }
+.btn {
+  padding: 1.8rem 8rem;
+}
 
 @media (min-width: 650px) {
-  form {
-    width: 50%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  .forget {
-    margin-left: 1.3rem;
-  }
 }

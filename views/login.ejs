@@ -12,23 +12,35 @@
 </head>
 
 <body>
+
+  <div class="bg-icon l-top"></div>
+  <div class="bg-icon r-top"></div>
+  <div class="bg-icon r-middle"></div>
+
+  <div class="bg-icon l-botton"></div>
+  <div class="bg-icon b-botton"></div>
+  <div class="bg-icon r-botton"></div>
+
   <main class="main">
-    <div class="logo"></div>
+    <div class="saly-icon"></div>
     <form action="/login" method="POST">
-      <div class="input-field">
-        <input type="email" id="email" name="email" class="input-clas" autocomplete="off" placeholder=" " required />
-        <label for="email" class="input-label">Email</label>
+      <label for="email">Email</label>
+
+      <div class="input-wrapper">
+        <img src="/img/mail-icon.svg" alt="Icone de email">
+        <input type="email" id="email" name="email" class="input-clas" autocomplete="off" required />
       </div>
 
-      <div class="input-field">
-        <input type="password" id="senha" name="password" class="input-clas" autocomplete="off" placeholder=" " required />
-        <label for="senha" class="input-label">Senha</label>
+      <label for="senha">Mot de passe</label>
+      <div class="input-wrapper">
+        <img src="/img/key-icon.svg" alt="Icone de Chave">
+        <input type="password" id="senha" name="password" class="input-clas" autocomplete="off" required />
       </div>
-
-      <a href="#" class="forget">Esqueceu a senha?</a>
       <button class="btn">Enviar</button>
     </form>
   </main>
+
+
 </body>
 
 </html>
