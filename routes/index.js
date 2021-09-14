@@ -5,7 +5,6 @@ const Reserva = require("../database/reservaData");
 const Usuario = require("../database/userData");
 const sequelize = require("sequelize");
 const session = require("express-session");
-const flash = require("connect-flash");
 
 router.use(
   session({
@@ -15,7 +14,7 @@ router.use(
   })
 );
 
-router.use(flash());
+//Criação do usuário padrão e das unidades no BD
 
 router.get("/sair", (req, res) => {
   req.session.user = undefined;
