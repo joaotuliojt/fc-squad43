@@ -47,6 +47,38 @@
   margin-top: 0rem;
 }
 
+.closeCrowded {
+  display: flex;
+  width: 100%;
+  margin: 7rem auto;
+  justify-content: center;
+  text-decoration: none;
+  padding: 1.6rem 3.12rem;
+  background: #B93200;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  transition: 0.25s;
+  margin-top: 0rem;
+}
+
+.closeAgain {
+  display: flex;
+  width: 100%;
+  margin: 7rem auto;
+  justify-content: center;
+  text-decoration: none;
+  padding: 1.6rem 3.12rem;
+  background: #6263AB;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  transition: 0.25s;
+  margin-top: 0rem;
+}
+
 .phrase {
   font-size: 1.7rem;
   margin-top: 3rem;
