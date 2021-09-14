@@ -25,11 +25,11 @@
       </div>
       <h5>Unidades</h5>
       <p>
-        <input value="2" type="radio" id="santos" name="radio_group" checked>
+        <input <%- user.unidade_id==2 ? 'checked' : '' %> value="2" type="radio" id="santos" name="radio_group" checked>
         <label for="santos">Santos</label>
       </p>
       <p>
-        <input value="1" type="radio" id="sp" name="radio_group">
+        <input value="1" <%- user.unidade_id==1 ? 'checked' : '' %> type="radio" id="sp" name="radio_group">
         <label for="sp">São Paulo</label>
       </p>
       <button type="submit" class="btn">Salvar</button>

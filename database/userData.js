@@ -15,13 +15,9 @@ const usuario = connection.define("usuario", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  id_unidade: {
+  unidade_id: {
     type: Sequelize.INTEGER,
     allowNull: true,
-    reference: {
-      model: unidade,
-      key: "id",
-    },
   },
 });
 

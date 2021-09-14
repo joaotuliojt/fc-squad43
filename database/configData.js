@@ -1,6 +1,10 @@
+const DB_SCHEMA = "fcallendar_2";
+const DB_USERNAME = "root"; //
+const DB_PASSWORD = "";
+
 const Sequelize = require("sequelize");
 
-const connection = new Sequelize("fcallendar_2", "root", "", {
+const connection = new Sequelize(DB_SCHEMA, DB_USERNAME, DB_PASSWORD, {
   host: "localhost",
   dialect: "mysql",
 });
