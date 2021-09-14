@@ -1,16 +1,15 @@
-const swiper = new Swiper('.swiper', {
-   // Quantidade de slides por casa vizualizacao
-  slidesPerView: 1,
-  
-  // Botoes de navegacao
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const select = document.querySelector(".months");
 
-  // Ativa a rolagem do mouse
-    mousewheel: true,
+next.addEventListener("click", () => {
+  if (select.selectedIndex < 11) {
+    select.selectedIndex++;
+  }
+});
 
-  // Ativa setas do teclado
-    keyboard: true,
-})
+prev.addEventListener("click", () => {
+  if (select.selectedIndex > 0) {
+    select.selectedIndex--;
+  }
+});

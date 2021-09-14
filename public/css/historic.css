@@ -34,10 +34,6 @@
 .month-select {
   position: relative;
 }
-.month-select > .months {
-  width: 100%;
-}
-
 .months {
   margin-top: 0.8rem;
   border: none;
@@ -49,11 +45,19 @@
   text-overflow: "";
   font-size: 1.8rem;
   height: 4rem;
+  width: 100%;
+}
+.months:disabled {
+  color: black;
+  opacity: 1;
+  font-weight: 500;
 }
 .prev,
 .next {
+  border: none;
+  background: transparent;
   width: 1.4rem;
-  height: 1.4 rem;
+  height: 1.4rem;
   box-shadow: -2px 2px 0 black;
   position: absolute;
   top: 50%;

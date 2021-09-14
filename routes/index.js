@@ -3,7 +3,7 @@ const router = require("express").Router();
 const Unidade = require("../database/unidadeData");
 const Reserva = require("../database/reservaData");
 const Usuario = require("../database/userData");
-
+const sequelize = require("sequelize");
 const session = require("express-session");
 const flash = require("connect-flash");
 
@@ -69,12 +69,40 @@ router.get("/sedes", (req, res) => {
   }
 });
 
-router.get("/historic", (req, res) => {
+router.get("/historic/:month?", (req, res) => {
+  let user = req.session.user;
+
   if (req.session.user) {
-    res.render("historic");
+    let monthP = req.params.month;
+    let month;
+    if (isNaN(monthP)) {
+      month = new Date().getMonth() + 1;
+    } else {
+      month = monthP;
+    }
+
+    Reserva.findAll({
+      where: {
+        id_usuario: user.id,
+        data: sequelize.where(
+          sequelize.fn("month", sequelize.col("data")),
+          month
+        ),
+      },
+      order: [["data", "DESC"]],
+      raw: true,
+    }).then((agendamentos) => {
+      res.render("historic", { agendamentos, mes: month });
+    });
   } else {
     res.redirect("/login");
   }
+});
+
+router.post("/historic", (req, res) => {
+  let user = req.session.user;
+  let month = req.body.months;
+  res.redirect(`/historic/${month}`);
 });
 
 router.get("/reserve", (req, res) => {
@@ -87,20 +115,40 @@ router.get("/reserve", (req, res) => {
 
 router.post("/reserve", (req, res) => {
   let data = req.body.data;
+  data = `${data} 00:00:00`;
   let idUnidade = req.body.unidade;
-  let limiteUnidade;
+
   let user = req.session.user;
 
   Unidade.findOne({ where: { id: idUnidade }, raw: true }).then((n) => {
-    limiteUnidade = Math.round(n.capacidade * 0.4);
-  });
+    let limiteUnidade = Math.round(n.capacidade * 0.4);
 
-  Reserva.count({ where: { data: { data }, id: { idUnidade } } }).then((c) => {
-    if (c <= limiteUnidade) {
-      Reserva.create({ data, id_usuario: user.id }).then(() => {
-        res.redirect("/reserve#openModal");
-      });
-    }
+    Reserva.count({ where: { data: data, id_unidade: idUnidade } }).then(
+      (n) => {
+        let peoples = n;
+        Reserva.count({
+          where: { data: data, id_usuario: user.id },
+        }).then(
+          //data: data, id_usuario: user.id
+          (n) => {
+            let isAgend = n >= 1 ? true : false;
+
+            if (peoples <= limiteUnidade && isAgend == false) {
+              Reserva.create({
+                data,
+                id_usuario: user.id,
+                id_unidade: idUnidade,
+              }).then(() => {
+                console.log(isAgend, peoples, data);
+                res.redirect("/reserve#openModal");
+              });
+            } else {
+              res.redirect("/initial");
+            }
+          }
+        );
+      }
+    );
   });
 });
 

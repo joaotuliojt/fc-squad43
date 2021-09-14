@@ -63,61 +63,72 @@
       <div class="swiper-button-next"></div>
     </div> -->
     <div class="month-select">
-      <select name="months" class="months">
-        <option value="1">Janeiro</option>
-        <option value="2">Fevereiro</option>
-        <option value="3">Março</option>
-        <option value="4">Abril</option>
-        <option value="5">Maio</option>
-        <option value="6">Junho</option>
-        <option value="7">Julho</option>
-        <option value="8">Agosto</option>
-        <option value="9">Setembro</option>
-        <option value="10">Outubro</option>
-        <option value="11">Novembro</option>
-        <option value="12">Dezembro</option>
-      </select>
-      <div class="prev"></div>
-      <div class="next"></div>
+      <form id="form-historic" action="/historic" method="POST">
+        <select name="months" class="months">
+          <option value="1" <%=mes==1?'selected':'' %> >Janeiro</option>
+          <option value="2" <%=mes==2?'selected':'' %>>Fevereiro</option>
+          <option value="3" <%=mes==3?'selected':'' %>>Março</option>
+          <option value="4" <%=mes==4?'selected':'' %>>Abril</option>
+          <option value="5" <%=mes==5?'selected':'' %>>Maio</option>
+          <option value="6" <%=mes==6?'selected':'' %>>Junho</option>
+          <option value="7" <%=mes==7?'selected':'' %>v>Julho</option>
+          <option value="8" <%=mes==8?'selected':'' %>>Agosto</option>
+          <option value="9" <%=mes==9?'selected':'' %>>Setembro</option>
+          <option value="10" <%=mes==10?'selected':'' %>>Outubro</option>
+          <option value="11" <%=mes==11?'selected':'' %>>Novembro</option>
+          <option value="12" <%=mes==12?'selected':'' %>>Dezembro</option>
+        </select>
+        <button type="submit" class="prev"></button>
+        <button type="submit" class="next"></button>
+        <!-- <div class="prev"></div>
+        <div class="next"></div> -->
+      </form>
     </div>
     <!-- responsavel por mostrar dia, semana e sede -->
-    <div class="containerView">
-      <div class="containerTime">
-        <p class="day">30</p>
-        <p class="week">Seg</p>
-        <p class="thirst">Santos - SP</p>
-      </div>
-      <!--  <div class="containerTime">
-                <p class="day">23</p>
-                <p class="week">Seg</p>
-                <p class="thirst">Santos - SP</p>
-            </div>
-            <div class="containerTime">
-                <p class="day">12</p>
-                <p class="week">Qua</p>
-                <p class="thirst">Santos - SP</p>
-            </div> -->
-    </div>
-    <span class="title-desk">Relatório do mês</span>
-    <!-- <div class="speedometermonth">
-      <div class="gauge">
-        <div class="gauge__body">
-          <div class="gauge__fill"></div>
-          <div class="gauge__cover"></div>
+    <% agendamentos.forEach(agendamento=> { %>
+      <% function formatDay(day){ if(day==0){ return "Dom" } if(day==1){ return "Seg" } if(day==2){ return "Ter" }
+        if(day==3){ return "Qua" } if(day==4){ return "Qui" } if(day==5){ return "Sex" } if(day==6){ return "Seb" } }%>
+        <div class="containerTime">
+          <p class="day">
+            <%-agendamento.data.getDate()%>
+          </p>
+          <p class="week">
+            <%- formatDay(agendamento.data.getDay())%>
+          </p>
+          <p class="thirst">
+            <%= agendamento.id_unidade==1 ? 'São Paulo' : 'Santos' %>
+          </p>
         </div>
-      </div>
-    </div>
-    <span class="title-desk end">em Home Office</span>
-    <p class="question">Que tal reservar um dia no escritório?</p> -->
+        <% }) %>
+
+
+          </div>
+          <span class="title-desk">Relatório do mês</span>
+          <div class="speedometermonth">
+            <div class="gauge">
+              <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+              </div>
+            </div>
+          </div>
+          <span class="title-desk end">em Home Office</span>
+          <p class="question">Que tal reservar um dia no escritório?</p>
   </main>
+
+  <script src="/javascript/gauge.js"></script>
   <!-- Biblioteca Swiper -->>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
   <!-- Javascript para o Swiper -->
   <script src="/javascript/historic.js"></script>
 
-  <!-- Javascript para o velocimetro -->
-  <script src="/javascript/gauge.js"></script>
+
+  <script>
+
+
+
+  </script>
 </body>
 
 </html>
