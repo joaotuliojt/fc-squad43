@@ -39,12 +39,23 @@ cd nome_da_pasta
 $ npm i
 
 # Algumas informações importantes!!
-A aplicação FCallendar não registra consultores, pois, se trata de um agendamento exclusivo para os consultores no qual utilizam um email corporativo.
+<p> A aplicação FCallendar não registra consultores, pois, se trata de um agendamento exclusivo para os consultores no qual utilizam um email corporativo. </p>
 
 Para poder ter uma melhor experiência utilize um usuário padrão registrado no banco de dados:
 Emai: teste@fcamara.com | Senha: 13850
 
-#Agora é só rodar!! No terminal na pasta do projeto digite:
+# Preparando MySql
+Para a aplicação funcionar você terá que criar um novo schema no MySql, aconselhamos usar o MySQL Workbench para isso
+
+# Configurando banco de dados no código.
+Vá para o arquivo configData.js e insira as informações
+
+DB_SCHEMA = (Nome do seu Schema do MySql)
+DB_USERNAME = (Seu usuário, por padrão deixamos 'root')
+DB_PASSWORD = (Senha do seu Banco de Dados)
+
+
+# Agora é só rodar!! No terminal na pasta do projeto digite:
 $ node index.js
 
 ```
