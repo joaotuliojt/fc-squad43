@@ -36,6 +36,7 @@
   text-align: center;
   color: var(--primary-color);
   font-weight: bold;
+  cursor: default;
 }
 
 .nav__block {

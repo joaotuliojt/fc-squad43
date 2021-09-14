@@ -5,7 +5,6 @@ const Reserva = require("../database/reservaData");
 const Usuario = require("../database/userData");
 const sequelize = require("sequelize");
 const session = require("express-session");
-const flash = require("connect-flash");
 
 router.use(
   session({
@@ -15,7 +14,7 @@ router.use(
   })
 );
 
-router.use(flash());
+//Criação do usuário padrão e das unidades no BD
 
 router.get("/sair", (req, res) => {
   req.session.user = undefined;
@@ -162,7 +161,9 @@ router.get("/profile", (req, res) => {
 
 router.get("/profile/edit", (req, res) => {
   if (req.session.user) {
-    res.render("profileEdit", { user: req.session.user });
+    let user = req.session.user;
+    console.log(user);
+    res.render("profileEdit", { user });
   } else {
     res.redirect("/login");
   }
@@ -171,13 +172,14 @@ router.get("/profile/edit", (req, res) => {
 router.post("/profile/edit", (req, res) => {
   let nome = req.body.nome;
   let unidade = req.body.radio_group;
-  if (req.session.user) {
+  let user = req.session.user;
+  if (user) {
     Usuario.update(
-      { nome: nome, unidade: unidade },
+      { nome: nome, unidade_id: unidade },
       { where: { id: req.session.user.id } }
     ).then(() => {
       req.session.user.nome = nome;
-      req.session.user.unidade = unidade;
+      req.session.user.unidade_id = unidade;
       res.redirect("/profile");
     });
   }

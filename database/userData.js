@@ -15,6 +15,10 @@ const usuario = connection.define("usuario", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  unidade_id: {
+    type: Sequelize.INTEGER,
+    allowNull: true,
+  },
 });
 
 usuario.sync({ force: false });
