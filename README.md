@@ -4,13 +4,15 @@ Projeto desenvolvido para o Hackathon do Programa de Formação da [FCamara](htt
 ## 💻 Sobre o projeto
 O FCallendar é uma aplicação WEB criada para ajudar com a volta do modelo híbrido de trabalho.
 
-A aplicação consiste serve para qualquer consultor da empresa que queira trabalhar algum dia de forma preserncial, poder escolher o dia para fazer um agendamento para trabalhar em algum dos escritórios da FCamara.
+<p> A aplicação serve para qualquer consultor ou os famosos #SangueLaranja da empresa, possam fazer um agendamento para irem e trabalharem no escritório respeitando o limite para não causar aglomeração </p>
 
 ## 🎨Layout
 
+---
+
 ## Como executar o projeto
 
-💡 Para tudo funcionar normalmente o back-end tem que esta rodando
+💡 Para tudo funcionar normalmente o back-end tem que estar rodando!!
 
 ---
 
