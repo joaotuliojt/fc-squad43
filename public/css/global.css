@@ -78,6 +78,7 @@ body {
   font-weight: 500;
   box-shadow: 0px 4px 30px 0px #b9abd2;
   transition: 0.25s;
+  padding: 1.8rem 8rem;
 }
 .btn:hover {
   filter: brightness(1.1);

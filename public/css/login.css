@@ -69,7 +69,7 @@ form label {
   background-position: center;
   width: 34rem;
   height: 34rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
 }
 
 .input-wrapper {
@@ -99,9 +99,7 @@ form label {
 .forget:hover {
   color: var(--primary-color);
 }
-.btn {
-  padding: 1.8rem 8rem;
-}
+
 
 @media (min-width: 650px) {
 }
