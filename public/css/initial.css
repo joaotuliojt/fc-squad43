@@ -24,7 +24,7 @@
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7.8rem;
+  gap: 4.5rem;
 }
 .option {
   text-align: center;
@@ -43,11 +43,38 @@
   font-size: 2rem;
   font-weight: 400;
 }
-.circle {
+.schedule {
   clip-path: circle();
-  width: 11rem;
-  height: 11rem;
+  width: 15rem;
+  height: 15rem;
   margin: 0 auto;
-  background: #c4c4c4;
+  background: url("/img/schedule.svg") no-repeat;
+  display: block;
+}
+
+.reserve {
+  clip-path: circle();
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  background: url("/img/reserve.svg") no-repeat;
+  display: block;
+}
+
+.headquarters {
+  clip-path: circle();
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  background: url("/img/headquarters.svg") no-repeat;
+  display: block;
+}
+
+.profilebu {
+  clip-path: circle();
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  background: url("/img/profilebu.svg") no-repeat;
   display: block;
 }
