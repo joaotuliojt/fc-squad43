@@ -1,7 +1,7 @@
 .profile {
   width: 100%;
   height: 16rem;
-  background: #2a2962;
+  background: linear-gradient(#FE4400, #FF7542, #FF8E65);
   position: relative;
   margin-bottom: 9.6rem;
 }
