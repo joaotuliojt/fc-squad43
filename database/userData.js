@@ -19,6 +19,10 @@ const usuario = connection.define("usuario", {
     type: Sequelize.INTEGER,
     allowNull: true,
   },
+  foto: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
 });
 
 usuario.sync({ force: false });

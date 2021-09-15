@@ -13,12 +13,15 @@
 
 <body>
 
-  <section class="profile">
-    <div class="profile__img"></div>
-  </section>
+  <form enctype="multipart/form-data" action="/profile/edit" method="POST">
+    <section class="profile">
+      <div class="profile__img">
+        <label class="label-image" for="image-input"><img src="/img/upload-big-arrow.png"></label>
+        <input type="file" id="image-input" class="file-input" name="inputImg">
+      </div>
+    </section>
 
-  <main class="main">
-    <form action="/profile/edit" method="POST">
+    <main class="main">
       <div class="input-field">
         <input value="<%=user.nome%>" type="text" name="nome" id="nome" />
         <label for="nome">Nome</label>
@@ -33,9 +36,18 @@
         <label for="sp">São Paulo</label>
       </p>
       <button type="submit" class="btn">Salvar</button>
-    </form>
+  </form>
   </main>
-
+  <script>
+    let divImg = document.querySelector('.profile__img');
+    let label = document.querySelector('.label-image');
+    divImg.addEventListener('mouseover', () => {
+      label.classList.add('active')
+    })
+    divImg.addEventListener('mouseleave', () => {
+      label.classList.remove('active')
+    })
+  </script>
 </body>
 
 </html>

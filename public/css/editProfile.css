@@ -16,6 +16,35 @@
   transform: translateX(-50%);
 }
 
+.file-input {
+  display: none;
+}
+.label-image {
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.label-image img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.label-image.active {
+  transition: 0.25s;
+  opacity: 1;
+  visibility: visible;
+}
 h5 {
   margin-top: 5rem;
 }
