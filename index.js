@@ -17,6 +17,7 @@ configData
           nome: "Usuário Teste",
           email: "teste@fcamara.com",
           senha: "13850",
+          foto: null,
         }).then(() => {
           console.log("Usuário Padrão Criado!");
         });

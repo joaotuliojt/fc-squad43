@@ -14,7 +14,7 @@ router.use(
   })
 );
 
-//Criação do usuário padrão e das unidades no BD
+//MUlter Config
 
 router.get("/sair", (req, res) => {
   req.session.user = undefined;
@@ -138,7 +138,6 @@ router.post("/reserve", (req, res) => {
                 id_usuario: user.id,
                 id_unidade: idUnidade,
               }).then(() => {
-                console.log(isAgend, peoples, data);
                 res.redirect("/reserve#openModal");
               });
             } else {
@@ -162,7 +161,6 @@ router.get("/profile", (req, res) => {
 router.get("/profile/edit", (req, res) => {
   if (req.session.user) {
     let user = req.session.user;
-    console.log(user);
     res.render("profileEdit", { user });
   } else {
     res.redirect("/login");
@@ -170,6 +168,7 @@ router.get("/profile/edit", (req, res) => {
 });
 
 router.post("/profile/edit", (req, res) => {
+  console.log(req.file);
   let nome = req.body.nome;
   let unidade = req.body.radio_group;
   let user = req.session.user;
