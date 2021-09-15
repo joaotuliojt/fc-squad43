@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="shortcut icon"
+      type="imagex/x-icon"
+      href="/img/FCallendar-Logo-v1.ico"
+    />
+    <title>FCallendar</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
-  <title>FCallendar</title>
-</head>
+  <body>
+    <div class="bg-icon l-top"></div>
+    <div class="bg-icon r-top"></div>
+    <div class="bg-icon r-middle"></div>
 
-<body>
+    <div class="bg-icon l-botton"></div>
+    <div class="bg-icon b-botton"></div>
+    <div class="bg-icon r-botton"></div>
 
-  <div class="bg-icon l-top"></div>
-  <div class="bg-icon r-top"></div>
-  <div class="bg-icon r-middle"></div>
+    <main class="main">
+      <div class="saly-icon"></div>
+      <form action="/login" method="POST">
+        <label for="email">Email</label>
 
-  <div class="bg-icon l-botton"></div>
-  <div class="bg-icon b-botton"></div>
-  <div class="bg-icon r-botton"></div>
+        <div class="input-wrapper">
+          <img src="/img/mail-icon.svg" alt="Icone de email" />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-clas"
+            autocomplete="off"
+            required
+          />
+        </div>
 
-  <main class="main">
-    <div class="saly-icon"></div>
-    <form action="/login" method="POST">
-      <label for="email">Email</label>
+        <label for="senha">Mot de passe</label>
+        <div class="input-wrapper">
+          <img src="/img/key-icon.svg" alt="Icone de Chave" />
+          <input
+            type="password"
+            id="senha"
+            name="password"
+            class="input-clas"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button class="btn">Enviar</button>
+        <br />
 
-      <div class="input-wrapper">
-        <img src="/img/mail-icon.svg" alt="Icone de email">
-        <input type="email" id="email" name="email" class="input-clas" autocomplete="off" required />
-      </div>
-
-      <label for="senha">Mot de passe</label>
-      <div class="input-wrapper">
-        <img src="/img/key-icon.svg" alt="Icone de Chave">
-        <input type="password" id="senha" name="password" class="input-clas" autocomplete="off" required />
-      </div>
-      <button class="btn">Enviar</button>
-    </form>
-  </main>
-
-
-</body>
-
+        <div id="openModal" class="modalDialog">
+          <div>
+            <img class="imgfeed" src="" alt="Uma logo" />
+            <h3 class="Feedback">Não encontrado</h3>
+            <p class="phrase">Usuário não cadastrado</p>
+            <a href="#close" title="Close" class="close">Confirmar</a>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
