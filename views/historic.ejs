@@ -19,49 +19,7 @@
       <span class="title-desk">Meu Histórico</span>
       <div class="divider"></div>
     </section>
-    <!-- Utilizacao da biblioteca para fazer o carrocel -->
-    <!-- <div class="month swiper">
-      <div class="swiper-wrapper">
-        <div class="month swiper-slide">
-          <p>Janeiro</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Fevereiro</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Março</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Abril</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Maio</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Junho</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Julho</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Agosto</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Setembro</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Outubro</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Novembro</p>
-        </div>
-        <div class="month swiper-slide">
-          <p>Dezembro</p>
-        </div>
-      </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div> -->
+
     <div class="month-select">
       <form id="form-historic" action="/historic" method="POST">
         <select name="months" class="months">
@@ -100,35 +58,23 @@
           </p>
         </div>
         <% }) %>
-
-
           </div>
-          <span class="title-desk">Relatório do mês</span>
-          <div class="speedometermonth">
-            <div class="gauge">
-              <div class="gauge__body">
-                <div class="gauge__fill"></div>
-                <div class="gauge__cover"></div>
-              </div>
-            </div>
-          </div>
-          <span class="title-desk end">em Home Office</span>
-          <p class="question">Que tal reservar um dia no escritório?</p>
   </main>
+  <button class="btn">Reservar uma vaga</button>
+  <%- include('./partials/navigation.ejs') %>
+    <script src="/javascript/gauge.js"></script>
+    <!-- Biblioteca Swiper -->>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-  <script src="/javascript/gauge.js"></script>
-  <!-- Biblioteca Swiper -->>
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-  <!-- Javascript para o Swiper -->
-  <script src="/javascript/historic.js"></script>
-
-
-  <script>
+    <!-- Javascript para o Swiper -->
+    <script src="/javascript/historic.js"></script>
 
 
+    <script>
 
-  </script>
+
+
+    </script>
 </body>
 
 </html>
