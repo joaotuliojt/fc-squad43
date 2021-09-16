@@ -220,4 +220,14 @@
     font-size: 2rem;
     margin-left: 3.5rem;
   }
+
+  #openModal > div {
+    width: 50%;
+    margin: 8% auto;
+    height: 60vh;
+  }
+
+  #openModal > div > img {
+    width: 50%;
+  }
 }
