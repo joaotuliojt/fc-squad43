@@ -165,26 +165,6 @@
 }
 
 @media (min-width: 650px) {
-  body {
-    display: grid;
-    width: 100vw;
-    grid-template-columns: 1fr 4fr;
-    gap: 1rem;
-    overflow: hidden;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    background: var(--secondary-color);
-  }
-  .main {
-    grid-column: 2/3;
-    border-radius: 1.8rem;
-    background: #fff;
-    display: inline-block;
-    height: 95vh;
-    position: relative;
-    padding: 6rem;
-    padding-top: 5rem;
-  }
   .mobile {
     display: none;
   }
