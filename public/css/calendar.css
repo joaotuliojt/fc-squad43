@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-bg-calendar: #ffffff;
+  --color-bg-calendar: #f7f7f7;
   --color-cell: #333333;
   --color-cell-disabled: #bdbdbd;
 }
@@ -18,22 +18,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -12rem;
-  margin-bottom: -12rem;
+  margin-top: -10rem;
+  margin-bottom: -10rem;
+  width: 109%;
+  margin-left: -1.6rem;
 }
 
 .calendar {
   padding: 20px 10px;
   background-color: var(--color-bg-calendar);
   border-radius: 1.2rem;
-  width: 100%;
-  max-width: 300px;
-  font-family: sans-serif;
-  font-size: 1.5rem;
+  width: 120%;
+  max-width: 600px;
+  font-family: Metropolis;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #333333;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  color: #3C3C3C;
 }
 
 .calendar__header {
@@ -83,11 +83,18 @@
 .grid__cell--selected {
   color: var(--color-bg-calendar);
   background-color: #ff6831;
-  border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+  border-radius: 55%;
 }
 
 .grid__cell--disabled {
   color: var(--color-cell-disabled);
   cursor: not-allowed;
+}
+
+.month-name {
+  font-size: 1.5rem;
+  color: #3C3C3C;
+}
+.control.control--prev, .control.control--next {
+  margin-top: -0.3rem;
 }
