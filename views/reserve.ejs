@@ -103,26 +103,26 @@
 
     </main>
 
+    <%- include('./partials/navigation.ejs') %>
 
 
-    <div id="openModalCrowded" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Dia Lotado</h3>
-        <p class="phrase">Confirme para tentar outro dia</p>
-        <a href="#close" title="Close" class="closeCrowded">Confirmar</a>
+      <div id="openModalCrowded" class="modalDialog">
+        <div>
+          <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+          <h3 class="Feedback">Dia Lotado</h3>
+          <p class="phrase">Confirme para tentar outro dia</p>
+          <a href="#close" title="Close" class="closeCrowded">Confirmar</a>
+        </div>
       </div>
-    </div>
 
-    <div id="openModalAgain" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Agendamento Já feito</h3>
-        <p class="phrase">Agendamento já foi realizado nesse dia</p>
-        <a href="#close" title="Close" class="closeAgain">Confirmar</a>
+      <div id="openModalAgain" class="modalDialog">
+        <div>
+          <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+          <h3 class="Feedback">Agendamento Já feito</h3>
+          <p class="phrase">Agendamento já foi realizado nesse dia</p>
+          <a href="#close" title="Close" class="closeAgain">Confirmar</a>
 
-      </div>
-      <%- include('./partials/navigation.ejs') %>
+        </div>
 
         <!-- Javascript para o velocimetro -->
         <script src="/javascript/gauge.js"></script>

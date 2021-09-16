@@ -234,15 +234,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 7rem;
+  padding: 1.5rem 4rem;
   z-index: 1000;
-  transform: translateY(100%);
   transition: 0.25s;
 }
-.navigation.active {
-  transform: translateY(0px);
-}
-
 .navigation-wrapper {
   width: 100%;
   display: flex;
@@ -255,28 +250,6 @@ body {
   height: 3.6rem;
   text-align: center;
   vertical-align: middle;
-}
-
-.btn-navigation {
-  z-index: 0;
-  position: fixed;
-  width: 4.7rem;
-  height: 4.7rem;
-  clip-path: circle();
-  right: 2.7rem;
-  bottom: 4.2rem;
-  background-color: var(--secondary-color);
-  background-image: url("/img/white_arrow.svg");
-  background-position: center;
-  transform: rotate(180deg);
-  background-repeat: no-repeat;
-  transition: 0.25s;
-}
-
-.btn-navigation.active {
-  background-position-x: center;
-  background-position-y: 1rem;
-  transform: rotate(0deg);
 }
 .navigation-desktop {
   display: none;

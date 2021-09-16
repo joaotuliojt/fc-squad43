@@ -7,7 +7,9 @@
   --swiper-navigation-size: 2rem;
   text-align: center;
 }
-
+.main {
+  padding-bottom: 10rem;
+}
 /* Flexibilidade do velocimetro */
 .speedometermonth {
   display: flex;
@@ -72,7 +74,7 @@
 
 .btn {
   padding: 1.9rem 3rem;
-  width: 70%;
+  margin-top: 1rem;
   background: radial-gradient(
     97.61% 97.61% at 8.53% 2.39%,
     #887cc9 0%,
@@ -88,15 +90,16 @@
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2rem 1fr 5rem;
-    grid-template-areas: "title title" "historic relatorio" "button button";
+    grid-template-rows: 2rem 1fr;
+    grid-template-areas: "title title" "historic relatorio";
     gap: 2rem;
-    padding: 3rem 2rem;
+    padding: 6rem;
+    padding-top: 5rem;
   }
   .btn {
     width: 26rem;
-    grid-area: button;
     padding: 1.6rem;
+    margin-top: 7rem;
     text-align: center;
     vertical-align: middle;
   }

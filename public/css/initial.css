@@ -28,6 +28,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4.5rem;
+  padding-bottom: 5rem;
 }
 .option {
   text-align: center;
