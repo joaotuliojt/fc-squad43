@@ -95,11 +95,11 @@ body {
   display: grid;
   background-color: #fdd090;
   grid-template-columns: 1fr 3fr;
-  width: 90%;
+  width: 100%;
   margin: 2rem;
   border-radius: 1.2rem;
   height: 7rem;
-  margin-left: 1rem;
+  margin-left: 0rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }

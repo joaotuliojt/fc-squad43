@@ -47,6 +47,7 @@
   height: 4rem;
   width: 100%;
   pointer-events: none;
+  background-color: transparent;
 }
 
 .prev,
