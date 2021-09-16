@@ -169,8 +169,8 @@ form label {
 }
 
 .imgfeed {
-  margin-bottom: 3rem;
-  margin-top: 12rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
 }
 .btn {
   background: radial-gradient(

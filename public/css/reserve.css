@@ -55,6 +55,11 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
+#openModal > div {
+  height: 70vh;
+
+}
 .btn.cancel {
   background: transparent;
   color: var(--gray-color);
@@ -62,6 +67,8 @@
   cursor: pointer;
   width: 100%;
   max-width: 100%;
+  border: solid #d3d8e0 0.2rem;
+  box-shadow: none;
 }
 .close {
   display: flex;
