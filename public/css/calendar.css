@@ -107,4 +107,8 @@
     width: 90%;
     padding: 0;
   }
+  .calendar {
+    width: 70%;
+    margin-left: -10rem;
+  }
 }
