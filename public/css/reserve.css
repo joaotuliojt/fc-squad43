@@ -227,6 +227,24 @@
   #openModal > div > img {
     width: 50%;
   }
+  #openModalCrowded > div {
+    width: 50%;
+    margin: 8% auto;
+    height: 60vh;
+  }
+
+  #openModalCrowded > div > img {
+    width: 50%;
+  }
+  #openModalAgain > div {
+    width: 50%;
+    margin: 8% auto;
+    height: 60vh;
+  }
+
+  #openModalAgain > div > img {
+    width: 50%;
+  }
   .btn {
     margin-top: 6rem;
   }
