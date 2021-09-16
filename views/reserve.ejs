@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/reserve.css">
   <link rel="stylesheet" href="/css/calendar.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
+
   <title>FCallendar</title>
 </head>
 
@@ -17,97 +19,134 @@
     <a href="/initial"><img src="/img/FCallendar_logo.svg" alt=""></a>
     <nav>
 
-      <a href="/profile">
+      <a href="/profile" data-aos="fade-right" data-aos-delay="300">
         <img src="/img/nav_icons/profile_icon.svg" alt="">
         Perfil
       </a>
 
-      <a href="/historic">
+      <a href="/historic" data-aos="fade-right" data-aos-delay="400">
         <img src="/img/nav_icons/callendar_icon.svg" alt="">
         Agenda
       </a>
 
-      <a href="/reserve" class="active">
+      <a href="/reserve" class="active" data-aos="fade-right" data-aos-delay="500">
         <img src="/img/nav_icons/clock_icon.svg" alt="">
         Reservar
       </a>
-      <a href="/sedes">
+      <a href="/sedes" data-aos="fade-right" data-aos-delay="600">
         <img src="/img/nav_icons/local_icon.svg" alt="">
         Sedes
       </a>
-      <a href="/sair">
+      <a href="/sair" data-aos="fade-right">
         <img src="/img/log_out.svg" alt="">
         Sair
       </a>
     </nav>
   </div>
   <main class="main">
-
-    <div class="title-page">
-      Reservar
-    </div>
-    <section>
-      <form action="/reserve" method="POST">
-        <select class="title-desk" name="unidade" id="">
-          <option class="options" value="1">São Paulo</option>
-          <option class="options" value="2">Santos</option>
-        </select>
-        <input class="hide" type="date" name="data" id="t2">
-    </section>
-    <div class="baseCalendar">
-      <div class="calendar" id="calendar">
+    <div class="mobile">
+      <div class="title-page">
+        Reservar
       </div>
-    </div>
-    <div class="containerView">
-      <div class="containerTime">
-        <p class="day"></p>
-        <p class="week"></p>
-        <p class="thirst"></p>
+      <section>
+        <form action="/reserve" method="POST">
+          <select class="title-desk" name="unidade" id="">
+            <option class="options" value="1">São Paulo</option>
+            <option class="options" value="2">Santos</option>
+          </select>
+          <input class="hide" type="date" name="data" id="t2">
+      </section>
+      <div class="baseCalendar">
+        <div class="calendar" id="calendar">
+        </div>
       </div>
-    </div>
-
-    <a class="btn" href="#openModal" type="submit">Confirmar</a>
-
-    <div id="openModal" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Deseja confirmar a agenda?</h3>
-        <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
-        <button title="Close" class="close" type="submit">Confirmar</button>
-        <a class="btn cancel" href="#close">Cancelar</a>
+      <div class="containerView">
+        <div class="containerTime">
+          <p class="day"></p>
+          <p class="week"></p>
+          <p class="thirst"></p>
+        </div>
       </div>
-    </div>
 
-    <div id="openModalCrowded" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Dia Lotado</h3>
-        <p class="phrase">Confirme para tentar outro dia</p>
-        <a href="#close" title="Close" class="closeCrowded">Confirmar</a>
-      </div>
-    </div>
+      <a class="btn" href="#openModal" type="submit">Confirmar</a>
 
-    <div id="openModalAgain" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Agendamento Já feito</h3>
-        <p class="phrase">Agendamento já foi realizado nesse dia</p>
-        <a href="#close" title="Close" class="closeAgain">Confirmar</a>
 
-      </div>
     </div>
     </form>
+    </div>
+
+    <div class="desktop">
+      <form action="/reserve" method="POST">
+
+        <h1>Reservar</h1>
+        <section class="container-desk">
+          <div class="baseCalendar">
+            <div class="calendar" id="calendar2">
+            </div>
+          </div>
+          <div class="form-container">
+            <h3>Sedes</h3>
+            <select class="title-desk" name="unidade" id="title-desk2">
+              <option class="options" value="1">São Paulo</option>
+              <option class="options" value="2">Santos</option>
+            </select>
+            <input class="hide" type="date" name="data" id="t3">
+            <h3>Dia selecionado</h3>
+            <div class="containerView">
+              <div id="containerTime2" class="containerTime">
+                <p id="day2" class="day"></p>
+                <p id="week2" class="week"></p>
+                <p id="thirst2" class="thirst"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button class="btn" type="submit">Confirmar</button>
+      </form>
+    </div>
 
   </main>
-  <%- include('./partials/navigation.ejs') %>
 
-    <!-- Javascript para o velocimetro -->
-    <script src="/javascript/gauge.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
-    <script type="text/javascript" src="/javascript/calendar.js"></script>
-    <script type="text/javascript" src="javascript/controlResul.js"></script>
+  <div id="openModal" class="modalDialog">
+    <div>
+      <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+      <h3 class="Feedback">Deseja confirmar a agenda?</h3>
+      <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
+      <button title="Close" class="close" type="submit">Confirmar</button>
+      <a class="btn cancel" href="#close">Cancelar</a>
+    </div>
+  </div>
 
+  <div id="openModalCrowded" class="modalDialog">
+    <div>
+      <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+      <h3 class="Feedback">Dia Lotado</h3>
+      <p class="phrase">Confirme para tentar outro dia</p>
+      <a href="#close" title="Close" class="closeCrowded">Confirmar</a>
+    </div>
+  </div>
+
+  <div id="openModalAgain" class="modalDialog">
+    <div>
+      <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+      <h3 class="Feedback">Agendamento Já feito</h3>
+      <p class="phrase">Agendamento já foi realizado nesse dia</p>
+      <a href="#close" title="Close" class="closeAgain">Confirmar</a>
+
+    </div>
+    <%- include('./partials/navigation.ejs') %>
+
+      <!-- Javascript para o velocimetro -->
+      <script src="/javascript/gauge.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+      <script type="text/javascript" src="/javascript/calendar.js"></script>
+      <script type="text/javascript" src="javascript/controlResul.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

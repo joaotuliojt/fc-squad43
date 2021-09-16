@@ -12,7 +12,7 @@
   padding: 1.2rem 2rem;
   background-color: #f7f7f7;
   font-weight: 400;
-  color: var(#3C3C3C);
+  color: var(#3c3c3c);
   border-radius: 1.8rem;
   box-shadow: 0px 2px 6px 0px #00000040;
   outline: none;
@@ -56,9 +56,8 @@
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
-div#openModal > div {
-  height: 77vh;
-
+#openModal > div {
+  height: 70vh;
 }
 .btn.cancel {
   background: transparent;
@@ -169,8 +168,11 @@ div#openModal > div {
   body {
     display: grid;
     width: 100vw;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
     overflow: hidden;
+    padding-right: 2rem;
+    padding-top: 1rem;
     background: var(--secondary-color);
   }
   .main {
@@ -180,25 +182,22 @@ div#openModal > div {
     display: inline-block;
     height: 95vh;
     position: relative;
+    padding: 6rem;
+    padding-top: 5rem;
   }
-  .main .btn {
-    margin-top: -6rem;
+  .mobile {
+    display: none;
   }
-  .title-page {
-    margin: 0;
-    border: none;
+  .container-desk {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 5rem;
   }
-  .modalDialog > div {
-    margin-top: 10%;
-    width: 40%;
-    height: auto;
+  .form-container h3:first-child {
+    margin-top: 0;
+    margin-bottom: 5rem;
   }
-  .btn.cancel {
-    width: 100%;
-    margin-bottom: 0;
-  }
-  .btn {
-    padding: 1.9rem 6rem;
-    max-width: 20rem;
+  .form-container h3 {
+    margin-top: 7rem;
   }
 }
