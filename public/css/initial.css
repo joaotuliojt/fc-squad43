@@ -98,4 +98,10 @@
     align-items: center;
     justify-content: center;
   }
+  .profile {
+    display: none;
+  }
+  .call {
+    display: none;
+  }
 }

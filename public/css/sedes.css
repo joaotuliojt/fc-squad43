@@ -19,3 +19,26 @@ section {
 .btn {
   margin-top: 3rem !important;
 }
+
+.main {
+  text-align: center;
+}
+.main img {
+  margin-top: 8.2rem;
+  width: 100%;
+  margin-bottom: 18rem;
+}
+.squad-error {
+  color: var(--primary-color);
+  margin: 10rem auto;
+}
+@media (min-width: 650px) {
+  .squad-error {
+    display: none;
+  }
+  .main img {
+    margin: 0;
+    width: 65rem;
+    height: 50rem;
+  }
+}

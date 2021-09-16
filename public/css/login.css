@@ -202,9 +202,10 @@ form label {
     background-image: url("/img/FCallendar_logo.svg");
     background-size: cover;
     width: 31rem;
-    height: 8rem;
+    min-height: 8rem;
     margin: 0;
-    margin-bottom: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
   }
   form {
     margin-bottom: 0;

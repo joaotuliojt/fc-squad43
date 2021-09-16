@@ -46,7 +46,7 @@ router.post("/login", (req, res) => {
       req.session.user = user;
       res.redirect("initial");
     } else {
-      res.render("login");
+      res.redirect("/login#openModal");
     }
   });
 });

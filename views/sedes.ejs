@@ -13,8 +13,12 @@
 </head>
 
 <body>
-  <main class="main">
-    <div class="block"></div>
+  <%- include('./partials/navigation-desktop.ejs') %>
+    <main class="main">
+      <h2 class="squad-error">#Squad43Error</h2>
+      <h2 style="text-align: center;">Ops... Esta página está em manutenção</h2>
+      <img src="/img/manutencao.svg" alt="">
+      <!-- <div class="block"></div>
 
     <section>
       <span class="title-desk">Santos</span>
@@ -47,11 +51,14 @@
         <p>De ocupação</p>
       </div>
     </section>
-
-
-    <a class="btn" href="/">Reservar</a>
-  </main>
-  <script src="/javascript/gauge.js"></script>
+    <a class="btn" href="/">Reservar</a> -->
+    </main>
+    <%- include('./partials/navigation.ejs') %>
+      <script src="/javascript/gauge.js"></script>
+      <script>
+        let link = document.querySelector("#sedes");
+        link.classList.add('active');
+      </script>
 </body>
 
 </html>
