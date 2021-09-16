@@ -82,4 +82,34 @@
 }
 
 @media (min-width: 650px) {
+  .divider {
+    display: none;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr 5rem;
+    grid-template-areas: "title title" "historic relatorio" "button button";
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+  .btn {
+    width: 26rem;
+    grid-area: button;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .container {
+    grid-area: historic;
+  }
+  .relatorio {
+    grid-area: relatorio;
+    padding-left: 2rem;
+  }
+  .wrapper-historic {
+    overflow-y: scroll;
+    height: 34rem;
+    padding-right: 1rem;
+  }
 }

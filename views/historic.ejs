@@ -18,49 +18,67 @@
   <%- include('./partials/navigation-desktop.ejs') %>
     <main class="main">
       <section>
-        <span class="title-desk">Meu Histórico</span>
+        <span class="title-desk">Agenda</span>
         <div class="divider"></div>
       </section>
-
-      <div class="month-select">
-        <form id="form-historic" action="/historic" method="POST">
-          <select name="months" class="months">
-            <option value="1" <%=mes==1 ?'selected':'' %> >Janeiro</option>
-            <option value="2" <%=mes==2 ?'selected':'' %>>Fevereiro</option>
-            <option value="3" <%=mes==3 ?'selected':'' %>>Março</option>
-            <option value="4" <%=mes==4 ?'selected':'' %>>Abril</option>
-            <option value="5" <%=mes==5 ?'selected':'' %>>Maio</option>
-            <option value="6" <%=mes==6 ?'selected':'' %>>Junho</option>
-            <option value="7" <%=mes==7 ?'selected':'' %>>Julho</option>
-            <option value="8" <%=mes==8 ?'selected':'' %>>Agosto</option>
-            <option value="9" <%=mes==9 ?'selected':'' %>>Setembro</option>
-            <option value="10" <%=mes==10 ?'selected':'' %>>Outubro</option>
-            <option value="11" <%=mes==11?'selected':'' %>>Novembro</option>
-            <option value="12" <%=mes==12?'selected':'' %>>Dezembro</option>
-          </select>
-          <button type="submit" class="prev"></button>
-          <button type="submit" class="next"></button>
-        </form>
+      <div class="container">
+        <div class="month-select">
+          <form id="form-historic" action="/historic" method="POST">
+            <select name="months" class="months">
+              <option value="1" <%=mes==1 ?'selected':'' %> >Janeiro</option>
+              <option value="2" <%=mes==2 ?'selected':'' %>>Fevereiro</option>
+              <option value="3" <%=mes==3 ?'selected':'' %>>Março</option>
+              <option value="4" <%=mes==4 ?'selected':'' %>>Abril</option>
+              <option value="5" <%=mes==5 ?'selected':'' %>>Maio</option>
+              <option value="6" <%=mes==6 ?'selected':'' %>>Junho</option>
+              <option value="7" <%=mes==7 ?'selected':'' %>>Julho</option>
+              <option value="8" <%=mes==8 ?'selected':'' %>>Agosto</option>
+              <option value="9" <%=mes==9 ?'selected':'' %>>Setembro</option>
+              <option value="10" <%=mes==10 ?'selected':'' %>>Outubro</option>
+              <option value="11" <%=mes==11?'selected':'' %>>Novembro</option>
+              <option value="12" <%=mes==12?'selected':'' %>>Dezembro</option>
+            </select>
+            <button type="submit" class="prev"></button>
+            <button type="submit" class="next"></button>
+          </form>
+        </div>
+        <!-- responsavel por mostrar dia, semana e sede -->
+        <div class="wrapper-historic">
+          <% agendamentos.forEach(agendamento=> { %>
+            <% function formatDay(day){ if(day==0){ return "Dom" } if(day==1){ return "Seg" } if(day==2){ return "Ter" }
+              if(day==3){ return "Qua" } if(day==4){ return "Qui" } if(day==5){ return "Sex" } if(day==6){ return "Seb"
+              } }%>
+              <div class="containerTime">
+                <p class="day">
+                  <%-agendamento.data.getDate()%>
+                </p>
+                <p class="week">
+                  <%- formatDay(agendamento.data.getDay())%>
+                </p>
+                <p class="thirst">
+                  <%= agendamento.id_unidade==1 ? 'São Paulo' : 'Santos' %>
+                </p>
+              </div>
+              <% }) %>
+        </div>
       </div>
-      <!-- responsavel por mostrar dia, semana e sede -->
-      <% agendamentos.forEach(agendamento=> { %>
-        <% function formatDay(day){ if(day==0){ return "Dom" } if(day==1){ return "Seg" } if(day==2){ return "Ter" }
-          if(day==3){ return "Qua" } if(day==4){ return "Qui" } if(day==5){ return "Sex" } if(day==6){ return "Seb" }
-          }%>
-          <div class="containerTime">
-            <p class="day">
-              <%-agendamento.data.getDate()%>
-            </p>
-            <p class="week">
-              <%- formatDay(agendamento.data.getDay())%>
-            </p>
-            <p class="thirst">
-              <%= agendamento.id_unidade==1 ? 'São Paulo' : 'Santos' %>
-            </p>
-          </div>
-          <% }) %>
+      <section class="relatorio">
+        <h3 style="text-align: center;">Relatorio do mês</h3>
+
+        <div class="occupation">
+          <div class="speedometermonth">
+            <div class="gauge" id="gauge2">
+              <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+              </div>
             </div>
-            <a href="/reserve" class="btn">Reservar uma vaga</a>
+          </div>
+          <p>Em home office</p>
+        </div>
+      </section>
+      </div>
+      <a href="/reserve" class="btn">Reservar uma vaga</a>
     </main>
     <%- include('./partials/navigation.ejs') %>
       <script src="/javascript/gauge.js"></script>
