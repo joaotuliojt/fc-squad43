@@ -23,23 +23,21 @@
     <div class="month-select">
       <form id="form-historic" action="/historic" method="POST">
         <select name="months" class="months">
-          <option value="1" <%=mes==1?'selected':'' %> >Janeiro</option>
-          <option value="2" <%=mes==2?'selected':'' %>>Fevereiro</option>
-          <option value="3" <%=mes==3?'selected':'' %>>Março</option>
-          <option value="4" <%=mes==4?'selected':'' %>>Abril</option>
-          <option value="5" <%=mes==5?'selected':'' %>>Maio</option>
-          <option value="6" <%=mes==6?'selected':'' %>>Junho</option>
-          <option value="7" <%=mes==7?'selected':'' %>v>Julho</option>
-          <option value="8" <%=mes==8?'selected':'' %>>Agosto</option>
-          <option value="9" <%=mes==9?'selected':'' %>>Setembro</option>
-          <option value="10" <%=mes==10?'selected':'' %>>Outubro</option>
+          <option value="1" <%=mes==1 ?'selected':'' %> >Janeiro</option>
+          <option value="2" <%=mes==2 ?'selected':'' %>>Fevereiro</option>
+          <option value="3" <%=mes==3 ?'selected':'' %>>Março</option>
+          <option value="4" <%=mes==4 ?'selected':'' %>>Abril</option>
+          <option value="5" <%=mes==5 ?'selected':'' %>>Maio</option>
+          <option value="6" <%=mes==6 ?'selected':'' %>>Junho</option>
+          <option value="7" <%=mes==7 ?'selected':'' %>>Julho</option>
+          <option value="8" <%=mes==8 ?'selected':'' %>>Agosto</option>
+          <option value="9" <%=mes==9 ?'selected':'' %>>Setembro</option>
+          <option value="10" <%=mes==10 ?'selected':'' %>>Outubro</option>
           <option value="11" <%=mes==11?'selected':'' %>>Novembro</option>
           <option value="12" <%=mes==12?'selected':'' %>>Dezembro</option>
         </select>
         <button type="submit" class="prev"></button>
         <button type="submit" class="next"></button>
-        <!-- <div class="prev"></div>
-        <div class="next"></div> -->
       </form>
     </div>
     <!-- responsavel por mostrar dia, semana e sede -->
@@ -63,7 +61,7 @@
   <a href="/reserve" class="btn">Reservar uma vaga</a>
   <%- include('./partials/navigation.ejs') %>
     <script src="/javascript/gauge.js"></script>
-    <!-- Biblioteca Swiper -->>
+    <!-- Biblioteca Swiper -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Javascript para o Swiper -->

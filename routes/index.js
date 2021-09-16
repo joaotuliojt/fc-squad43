@@ -79,7 +79,6 @@ router.get("/historic/:month?", (req, res) => {
     } else {
       month = monthP;
     }
-
     Reserva.findAll({
       where: {
         id_usuario: user.id,
@@ -99,7 +98,6 @@ router.get("/historic/:month?", (req, res) => {
 });
 
 router.post("/historic", (req, res) => {
-  let user = req.session.user;
   let month = req.body.months;
   res.redirect(`/historic/${month}`);
 });
