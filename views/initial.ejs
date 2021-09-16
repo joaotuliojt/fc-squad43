@@ -14,52 +14,52 @@
 </head>
 
 <body>
-
-  <section class="profile">
-    <div class="profile__img"></div>
-  </section>
-  <div class="call">
-    <h3>Olá, <span class="cl-orange">
-        <%= nome %>
-      </span>
-    </h3>
-    <p>O que deseja fazer?</p>
-  </div>
-  <main class="main">
-    <div class="options" data-aos="fade-up">
-      <div class="option">
-        <div class="links-container">
-          <a href="/historic" class="schedule" title="Ver minha agenda"></a>
-          <a href="/historic" title="Ver minha agenda">Agenda</a>
-        </div>
-      </div>
-
-      <div class="option">
-        <div class="links-container">
-          <a href="/reserve" class="reserve" title="Fazer uma reserva"></a>
-          <a href="/reserve" title="Fazer uma reserva">Reservar</a>
-        </div>
-      </div>
-
-      <div class="option">
-        <div class="links-container">
-          <a href="/sedes" class="headquarters" title="Sedes"></a>
-          <a href="/sedes" title="Sedes">Sedes</a>
-        </div>
-      </div>
-
-      <div class="option">
-        <div class="links-container">
-          <a href="/profile" class="profilebu" title="Sedes"></a>
-          <a href="/profile" title="Sedes">Perfil</a>
-        </div>
-      </div>
+  <%- include('./partials/navigation-desktop.ejs') %>
+    <section class="profile">
+      <div class="profile__img"></div>
+    </section>
+    <div class="call">
+      <h3>Olá, <span class="cl-orange">
+          <%= nome %>
+        </span>
+      </h3>
+      <p>O que deseja fazer?</p>
     </div>
-  </main>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <main class="main">
+      <div class="options" data-aos="fade-up">
+        <div class="option">
+          <div class="links-container">
+            <a href="/historic" class="schedule" title="Ver minha agenda"></a>
+            <a href="/historic" title="Ver minha agenda">Agenda</a>
+          </div>
+        </div>
+
+        <div class="option">
+          <div class="links-container">
+            <a href="/reserve" class="reserve" title="Fazer uma reserva"></a>
+            <a href="/reserve" title="Fazer uma reserva">Reservar</a>
+          </div>
+        </div>
+
+        <div class="option">
+          <div class="links-container">
+            <a href="/sedes" class="headquarters" title="Sedes"></a>
+            <a href="/sedes" title="Sedes">Sedes</a>
+          </div>
+        </div>
+
+        <div class="option">
+          <div class="links-container">
+            <a href="/profile" class="profilebu" title="Sedes"></a>
+            <a href="/profile" title="Sedes">Perfil</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>
