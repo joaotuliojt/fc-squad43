@@ -159,7 +159,7 @@ body {
   left: 0;
   width: inherit;
   height: 100%;
-  background: #ff9900;
+  background: #65AB0C;
   transform-origin: center top;
   transform: rotate(0.25turn);
   transition: transform 0.2s ease-out;
