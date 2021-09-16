@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/initial.css">
   <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>FCallendar - <%= nome %>
   </title>
 </head>
@@ -25,7 +26,7 @@
     <p>O que deseja fazer?</p>
   </div>
   <main class="main">
-    <div class="options">
+    <div class="options" data-aos="fade-up">
       <div class="option">
         <div class="links-container">
           <a href="/historic" class="schedule" title="Ver minha agenda"></a>
@@ -55,7 +56,10 @@
       </div>
     </div>
   </main>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

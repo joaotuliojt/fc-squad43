@@ -70,6 +70,8 @@
 }
 
 .btn {
+  padding: 1.9rem 3rem;
+  width: 70%;
   background: radial-gradient(
     97.61% 97.61% at 8.53% 2.39%,
     #887cc9 0%,

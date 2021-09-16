@@ -161,7 +161,9 @@
 @media (min-width: 650px) {
   body {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    width: 100vw;
+    grid-template-columns: 2fr 4fr;
+    overflow: hidden;
     background: var(--secondary-color);
   }
   .main {
@@ -171,6 +173,9 @@
     display: inline-block;
     height: 95vh;
     position: relative;
+  }
+  .main .btn {
+    margin-top: -6rem;
   }
   .title-page {
     margin: 0;
