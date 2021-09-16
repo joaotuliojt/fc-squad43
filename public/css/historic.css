@@ -96,7 +96,7 @@
   .btn {
     width: 26rem;
     grid-area: button;
-    padding: 1rem;
+    padding: 1.6rem;
     text-align: center;
     vertical-align: middle;
   }

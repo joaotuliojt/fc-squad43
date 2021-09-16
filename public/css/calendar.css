@@ -83,7 +83,7 @@
 .grid__cell--selected {
   color: var(--color-bg-calendar);
   background-color: #ff6831;
-  border-radius: 55%;
+  clip-path: circle();
 }
 
 .grid__cell--disabled {
