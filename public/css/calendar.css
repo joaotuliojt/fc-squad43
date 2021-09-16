@@ -1,90 +1,93 @@
-*, *:before, *:after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-bg-calendar: #ffffff;
-    --color-cell: #333333;
-    --color-cell-disabled: #bdbdbd;
+  --color-bg-calendar: #ffffff;
+  --color-cell: #333333;
+  --color-cell-disabled: #bdbdbd;
 }
 
 .baseCalendar {
-    min-height: 100vh;
-    padding: 0 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -12rem;
-    margin-bottom: -12rem;
+  min-height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -12rem;
+  margin-bottom: -12rem;
 }
 
 .calendar {
-    padding: 20px 10px;
-    background-color: var(--color-bg-calendar);
-    border-radius: 1.2rem;
-    width: 100%;
-    max-width: 300px;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333333;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+  padding: 20px 10px;
+  background-color: var(--color-bg-calendar);
+  border-radius: 1.2rem;
+  width: 100%;
+  max-width: 300px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .calendar__header {
-    color: #333333;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+  color: #3c3c3c;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .calendar .control {
-    color: #4d4d4d;
-    font-weight: bold;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0 5px;
-    font-size: 2rem;
+  color: #3c3c3c;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 2rem;
 }
 
-.grid__header, .grid__body {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
+.grid__header,
+.grid__body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .grid__header {
-    color: #0038f5;
-    margin-bottom: 20px;
+  color: #3c3c3c;
+  margin-bottom: 20px;
 }
 
 .grid__body {
-    grid-auto-rows: 40px;
-    color: var(--color-cell);
+  grid-auto-rows: 40px;
+  color: var(--color-cell);
 }
 
 .grid__cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid__cell--gd {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .grid__cell--selected {
-    color: var(--color-bg-calendar);
-    background-color: #809bfa;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
+  color: var(--color-bg-calendar);
+  background-color: #ff6831;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-bg-calendar) inset;
 }
 
 .grid__cell--disabled {
-    color: var(--color-cell-disabled);
-    cursor: not-allowed;
+  color: var(--color-cell-disabled);
+  cursor: not-allowed;
 }

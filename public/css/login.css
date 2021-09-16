@@ -67,6 +67,7 @@ form label {
   background: url("/img/saly-icon.svg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 34rem;
   height: 34rem;
   margin-top: 2rem;
@@ -180,4 +181,34 @@ form label {
   );
 }
 @media (min-width: 650px) {
+  body {
+    background-image: url("/img/background_login.png");
+    height: 100vh;
+  }
+  .bg-icon {
+    display: none;
+  }
+  .main {
+    width: 47rem;
+    max-height: 100vh;
+    background: #fff;
+    position: absolute;
+    right: 17rem;
+    top: 1%;
+    border-radius: 1.8rem;
+  }
+  .saly-icon {
+    background-image: url("/img/FCallendar_logo.svg");
+    background-size: cover;
+    width: 31rem;
+    height: 8rem;
+    margin: 0;
+    margin-bottom: 12rem;
+  }
+  form {
+    margin-bottom: 0;
+  }
+  .btn {
+    margin-bottom: 7rem;
+  }
 }

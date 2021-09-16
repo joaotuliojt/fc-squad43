@@ -131,17 +131,20 @@ router.post("/reserve", (req, res) => {
           //data: data, id_usuario: user.id
           (n) => {
             let isAgend = n >= 1 ? true : false;
-
-            if (peoples <= limiteUnidade && isAgend == false) {
-              Reserva.create({
-                data,
-                id_usuario: user.id,
-                id_unidade: idUnidade,
-              }).then(() => {
-                res.redirect("/reserve#openModal");
-              });
+            if (isAgend) {
+              res.redirect("/reserve#openModalAgain");
             } else {
-              res.redirect("/initial");
+              if (peoples <= limiteUnidade && isAgend == false) {
+                Reserva.create({
+                  data,
+                  id_usuario: user.id,
+                  id_unidade: idUnidade,
+                }).then(() => {
+                  res.redirect("/historic");
+                });
+              } else {
+                res.redirect("/reserve#openModalCrowded");
+              }
             }
           }
         );

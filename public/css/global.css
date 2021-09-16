@@ -41,6 +41,7 @@ html {
 body {
   font-size: 2rem;
   font-family: "Metropolis", sans-serif;
+  background: #fcfcfc;
 }
 /*Classe para ateração do Titulo*/
 .title-desk {
@@ -273,4 +274,48 @@ body {
   background-position-x: center;
   background-position-y: 1rem;
   transform: rotate(0deg);
+}
+.navigation-desktop {
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .navigation,
+  .btn-navigation {
+    display: none;
+  }
+  .navigation-desktop {
+    padding-left: 4rem;
+    display: block;
+  }
+  .navigation-desktop nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .navigation-desktop a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    position: relative;
+  }
+  .navigation-desktop a.active {
+    color: var(--primary-color);
+  }
+  .navigation-desktop a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    right: -1.7rem;
+    clip-path: circle();
+    background: var(--primary-color);
+  }
+  .navigation-desktop a:hover {
+    transition: 0.25s;
+    color: var(--primary-color);
+  }
 }

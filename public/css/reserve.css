@@ -26,9 +26,9 @@
   text-align: center;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100vh;
   z-index: 99999;
   opacity: 0;
   -webkit-transition: opacity 400ms ease-in;
@@ -42,29 +42,45 @@
 }
 .modalDialog > div {
   width: 90%;
-  height: 40rem;
   position: relative;
-  margin: 10% auto;
-  padding: 4rem;
+  height: 60vh;
+  margin: 20% auto;
+  padding: 0.8rem 1.6rem;
   border-radius: 1.2rem;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+.btn.cancel {
+  background: transparent;
+  color: var(--gray-color);
+  margin-top: 1.6rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100%;
+}
 .close {
   display: flex;
   width: 100%;
-  margin: 7rem auto;
+  margin: 1rem auto;
   justify-content: center;
   text-decoration: none;
   padding: 1.6rem 3.12rem;
-  background: #2b4bf2;
+  background: var(--primary-color);
   font-weight: bold;
   color: #ffffff;
   font-size: 1.6rem;
-  border-radius: 1.2rem;
+  border-radius: 1.8rem;
   transition: 0.25s;
   margin-top: 0rem;
+  border: none;
+  cursor: pointer;
+}
+.close:hover,
+.closeAgain:hover,
+.closeCrowded:hover {
+  transition: 0.25s;
+  filter: brightness(1.2);
 }
 
 .closeCrowded {
@@ -74,11 +90,11 @@
   justify-content: center;
   text-decoration: none;
   padding: 1.6rem 3.12rem;
-  background: #ff0700;
+  background: var(--primary-color);
   font-weight: bold;
   color: #ffffff;
   font-size: 1.6rem;
-  border-radius: 1.2rem;
+  border-radius: 1.8rem;
   transition: 0.25s;
   margin-top: 0rem;
 }
@@ -100,14 +116,20 @@
 }
 
 .phrase {
-  font-size: 1.7rem;
-  margin-top: 3rem;
+  width: 80%;
+
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 0.8rem;
   margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--gray-color);
 }
 
 .imgfeed {
-  margin-bottom: 3rem;
-  margin-top: 12rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
 }
 
 .containerTime {
@@ -123,11 +145,44 @@
 }
 .btn {
   margin-top: -0.3rem;
-  margin-bottom: 14rem;
+  margin-bottom: 15rem;
   background: radial-gradient(
     97.61% 97.61% at 8.53% 2.39%,
     #887cc9 0%,
     #5647a8 45.83%,
     #3a2a83 100%
   );
+}
+
+@media (min-width: 650px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background: var(--secondary-color);
+  }
+  .main {
+    grid-column: 2/3;
+    border-radius: 1.8rem;
+    background: #fff;
+    display: inline-block;
+    height: 95vh;
+    position: relative;
+  }
+  .title-page {
+    margin: 0;
+    border: none;
+  }
+  .modalDialog > div {
+    margin-top: 10%;
+    width: 40%;
+    height: auto;
+  }
+  .btn.cancel {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .btn {
+    padding: 1.9rem 6rem;
+    max-width: 20rem;
+  }
 }

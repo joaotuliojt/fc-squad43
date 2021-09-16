@@ -13,6 +13,30 @@
 </head>
 
 <body>
+  <div class="navigation-desktop">
+    <a href="/initial"><img src="/img/FCallendar_logo.svg" alt=""></a>
+    <nav>
+
+      <a href="/profile">
+        <img src="/img/nav_icons/profile_icon.svg" alt="">
+        Perfil
+      </a>
+
+      <a href="/historic">
+        <img src="/img/nav_icons/callendar_icon.svg" alt="">
+        Agenda
+      </a>
+
+      <a href="/reserve" class="active">
+        <img src="/img/nav_icons/clock_icon.svg" alt="">
+        Reservar
+      </a>
+      <a href="/sedes">
+        <img src="/img/nav_icons/local_icon.svg" alt="">
+        Sedes
+      </a>
+    </nav>
+  </div>
   <main class="main">
 
     <div class="title-page">
@@ -38,33 +62,30 @@
       </div>
     </div>
 
-
-    <!-- <a class="btn" href="#openModal">Confirmar</a> -->
-    <button class="btn" type="submit">Confirmar</button>
+    <a class="btn" href="#openModal" type="submit">Confirmar</a>
 
     <div id="openModal" class="modalDialog">
       <div>
-        <img class="imgfeed" src="" alt="Uma logo">
-        <h3 class="Feedback">Agendamento Confirmado</h3>
-        <p class="phrase">Agendamento realizado voltar</p>
-        <a href="#close" title="Close" class="close">Confirmar</a>
-
+        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+        <h3 class="Feedback">Deseja confirmar a agenda?</h3>
+        <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
+        <button title="Close" class="close" type="submit">Confirmar</button>
+        <a class="btn cancel" href="#close">Cancelar</a>
       </div>
     </div>
 
     <div id="openModalCrowded" class="modalDialog">
       <div>
-        <img class="imgfeed" src="" alt="Uma logo">
+        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
         <h3 class="Feedback">Dia Lotado</h3>
         <p class="phrase">Confirme para tentar outro dia</p>
         <a href="#close" title="Close" class="closeCrowded">Confirmar</a>
-
       </div>
     </div>
 
     <div id="openModalAgain" class="modalDialog">
       <div>
-        <img class="imgfeed" src="" alt="Uma logo">
+        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
         <h3 class="Feedback">Agendamento Já feito</h3>
         <p class="phrase">Agendamento já foi realizado nesse dia</p>
         <a href="#close" title="Close" class="closeAgain">Confirmar</a>
