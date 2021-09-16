@@ -75,6 +75,7 @@ body {
   box-shadow: 0px 4px 30px 0px #b9abd2;
   transition: 0.25s;
   padding: 1.8rem 8rem;
+  cursor: pointer;
 }
 .btn:hover {
   filter: brightness(1.1);
@@ -288,13 +289,19 @@ body {
   }
   .navigation-desktop {
     padding-left: 4rem;
-    display: block;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
   .navigation-desktop nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 4rem;
+    height: 100%;
+  }
+  .navigation-desktop nav a:last-child {
+    flex: auto;
   }
   .navigation-desktop a {
     color: #fff;
@@ -302,6 +309,7 @@ body {
     align-items: center;
     gap: 1.4rem;
     position: relative;
+    flex: 0 0;
   }
   .navigation-desktop a.active {
     color: var(--primary-color);

@@ -194,7 +194,8 @@ form label {
     background: #fff;
     position: absolute;
     right: 17rem;
-    top: 1%;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: 1.8rem;
   }
   .saly-icon {
@@ -203,12 +204,12 @@ form label {
     width: 31rem;
     height: 8rem;
     margin: 0;
-    margin-bottom: 12rem;
+    margin-bottom: 10rem;
   }
   form {
     margin-bottom: 0;
   }
   .btn {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
 }
