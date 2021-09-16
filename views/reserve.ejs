@@ -42,10 +42,21 @@
           </div>
         </div>
 
-        <a class="btn" href="#openModal" type="submit">Confirmar</a>
+        <a class="btn" href="#openModalMobile">Confirmar</a>
 
 
       </div>
+
+      <div id="openModalMobile" class="modalDialog mobile">
+        <div>
+          <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+          <h3 class="Feedback">Deseja confirmar a agenda?</h3>
+          <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
+          <button title="Close" class="close" type="submit">Confirmar</button>
+          <a class="btn cancel" href="#close">Cancelar</a>
+        </div>
+      </div>
+
       </form>
       </div>
 
@@ -75,21 +86,24 @@
               </div>
             </div>
           </section>
-          <button class="btn" href="#openModal" type="submit">Confirmar</button>
+          <a class="btn" href="#openModal" type="submit">Confirmar</a>
+
+          <div id="openModal" class="modalDialog">
+            <div>
+              <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
+              <h3 class="Feedback">Deseja confirmar a agenda?</h3>
+              <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
+              <button title="Close" class="close" type="submit">Confirmar</button>
+              <a class="btn cancel" href="#close">Cancelar</a>
+            </div>
+          </div>
+
         </form>
       </div>
 
     </main>
 
-    <div id="openModal" class="modalDialog">
-      <div>
-        <img class="imgfeed" src="/img/frame_modal.svg" alt="Uma logo">
-        <h3 class="Feedback">Deseja confirmar a agenda?</h3>
-        <p class="phrase">Após a confirmação você será direcionado para sua agenda!</p>
-        <button title="Close" class="close" type="submit">Confirmar</button>
-        <a class="btn cancel" href="#close">Cancelar</a>
-      </div>
-    </div>
+
 
     <div id="openModalCrowded" class="modalDialog">
       <div>
