@@ -65,3 +65,32 @@
 .btn {
   margin-top: 3rem;
 }
+.main .profile__img:nth-child(1) {
+  display: none;
+}
+@media (min-width: 650px) {
+  #mobile {
+    display: none;
+  }
+  .profile__img {
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+  }
+  .btn {
+    display: none;
+  }
+  .main .profile__img:nth-child(1) {
+    display: block;
+  }
+  .main {
+    padding: 6rem;
+    padding-top: 5rem;
+  }
+  .main img {
+    display: block;
+    margin: 0 auto;
+    width: 65rem;
+    height: 50rem;
+  }
+}

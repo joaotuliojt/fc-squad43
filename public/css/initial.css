@@ -85,6 +85,9 @@
   background-size: cover;
   display: block;
 }
+.welcome {
+  display: none;
+}
 /* @media (max-width: 370px) {
   .schedule {
     width: 10rem;
@@ -103,5 +106,33 @@
   }
   .call {
     display: none;
+  }
+  .option {
+    display: none;
+  }
+  .welcome {
+    display: block;
+    text-align: center;
+  }
+  .welcome h2 {
+    margin-top: 2rem;
+  }
+  .welcome img {
+    width: 100%;
+    height: 40rem;
+    margin-top: 4rem;
+    animation: updown 2s forwards infinite;
+  }
+  .welcome p {
+    margin-top: 3rem;
+  }
+  @keyframes updown {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
   }
 }

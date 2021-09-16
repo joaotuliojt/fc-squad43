@@ -9,31 +9,47 @@
   <link rel="stylesheet" href="/css/profile.css">
   <link rel="shortcut icon" type="imagex/x-icon" href="/img/FCallendar-Logo-v1.ico">
   <title>FCallendar - Profile</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <section class="profile">
-    <div class="profile__img"></div>
-    <a id="edit-icon" href="/profile/edit"><img src="/img/edit_user.svg" alt="Icone de um link para editar perfil"></a>
-  </section>
-  <main class="main">
-    <h3 class="name-user">
-      <%= user.nome %>
-    </h3>
+  <%- include('./partials/navigation-desktop.ejs') %>
+    <section id="mobile" class="profile">
+      <div class="profile__img"></div>
+      <a id="edit-icon" href="/profile/edit"><img src="/img/edit_user.svg"
+          alt="Icone de um link para editar perfil"></a>
+    </section>
+    <main class="main">
 
-    <nav>
-      <div class="nav__block">
-        <a href="#">
-          Unidade de <%- user.unidade==1 ? 'São Paulo' : 'Santos' %> </a>
-        <div class="divider"></div>
-        <a href="#">Relatório de reserva <img src="/img/arrow.svg" alt="Icone de seta"></a>
-      </div>
-      <div class="nav__block">
-        <a href="#">Termos de uso <img src="/img/arrow.svg" alt="Icone de seta"></a>
-      </div>
-    </nav>
-    <a href="/sair" class="btn">Sair</a>
-  </main>
+      <!-- <div class="profile__img"></div>
+
+      <h3 class="name-user">
+       
+      </h3>
+
+      <nav>
+        <div class="nav__block">
+          <a href="#">
+            Unidade de  </a>
+          <div class="divider"></div>
+          <a href="#">Relatório de reserva <img src="/img/arrow.svg" alt="Icone de seta"></a>
+        </div>
+        <div class="nav__block">
+          <a href="#">Termos de uso <img src="/img/arrow.svg" alt="Icone de seta"></a>
+        </div>
+      </nav>
+      <a href="/sair" class="btn">Sair</a> -->
+
+      <h2 style="text-align: center;">Ops... Esta página está em manutenção</h2>
+      <img src="/img/manutencao.svg" alt="">
+
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      let link = document.querySelector("#perfil");
+      link.classList.add('active');
+    </script>
 </body>
 
 </html>
