@@ -20,3 +20,13 @@
   </div>
 
 </nav>
+
+<script>
+  let btnNav = document.querySelector('.btn-navigation');
+  let navigationBar = document.querySelector('.navigation');
+
+  btnNav.addEventListener('click', event => {
+    btnNav.classList.toggle('active')
+    navigationBar.classList.toggle('active');
+  })
+</script>

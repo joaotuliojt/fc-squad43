@@ -68,3 +68,12 @@
   right: 0;
   transform: rotate(-135deg) translateY(50%);
 }
+
+.btn {
+  background: radial-gradient(
+    97.61% 97.61% at 8.53% 2.39%,
+    #887cc9 0%,
+    #5647a8 45.83%,
+    #3a2a83 100%
+  );
+}
