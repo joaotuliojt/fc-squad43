@@ -116,14 +116,15 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - <a href="https://www.figma.com">FIGMA</a> → <a href="https://www.figma.com/file/"> FCallendar - Squad43 </a>
 - <a href="https://trello.com"> Trello </a>
 - <a href="https://miro.com/app/=/"> Miro </a>
+- <a href="https://www.behance.net/gallery/126887807/FCALLENDAR"> Behance </a>
 
 ## 👨‍💻 Protagonistas
 
 <table>
   <tr>
-    <td align="center"><a href="https://www.linkedin.com/in/maressa-gonzales-05a15b92/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b>Maressa Gonzales</b></sub></a><br /><a href="https://www.linkedin.com/in/maressa-gonzales-05a15b92/" title="Maressa Gonzales"> </a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/jtsoares/"><img style="border-radius: 50%;" src="" width="100px;" alt=""/><br /><sub><b>João Túlio</b></sub></a><br /><a href="https://www.linkedin.com/in/jtsoares/" title="João Túlio"></a></td>
-    <td align="center"><a href="https://www.linkedin.com/in/anac-rocha/"><img style="border-radius: 50%;" src="" width="110px;" alt=""/><br /><sub><b>Ana Carolina</b></sub></a><br /><a href="https://www.linkedin.com/in/anac-rocha/" title="Carol"></a>  <a href="https://www.linkedin.com/in/anac-rocha/"</a></td> 
-    <td align="center"><a href="https://www.linkedin.com/in/igor-da-silva-medeiros/"><img style="border-radius: 50%;" src="" width="90px;" alt=""/><br /><sub><b>Igor</b></sub></a><br /><a href="https://www.linkedin.com/in/igor-da-silva-medeiros/" title="Igor perfil"></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/maressa-gonzales-05a15b92/"><img style="border-radius: 50%;" src="/github/Maressa.png" width="100px;" alt=""/><br /><sub><b>Maressa Gonzales</b></sub></a><br /><a href="https://www.linkedin.com/in/maressa-gonzales-05a15b92/" title="Maressa Gonzales"> </a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/jtsoares/"><img style="border-radius: 50%;" src="/github/João.png" width="100px;" alt=""/><br /><sub><b>João Túlio</b></sub></a><br /><a href="https://www.linkedin.com/in/jtsoares/" title="João Túlio"></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/anac-rocha/"><img style="border-radius: 50%;" src="/github/Ana.png" width="110px;" alt=""/><br /><sub><b>Ana Carolina</b></sub></a><br /><a href="https://www.linkedin.com/in/anac-rocha/" title="Carol"></a>  <a href="https://www.linkedin.com/in/anac-rocha/"</a></td> 
+    <td align="center"><a href="https://www.linkedin.com/in/igor-da-silva-medeiros/"><img style="border-radius: 50%;" src="/github/Igor.png" width="90px;" alt=""/><br /><sub><b>Igor</b></sub></a><br /><a href="https://www.linkedin.com/in/igor-da-silva-medeiros/" title="Igor perfil"></a></td>
   </tr>
 </table>
