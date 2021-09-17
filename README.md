@@ -8,6 +8,38 @@ O FCallendar é uma aplicação WEB criada para ajudar com a volta do modelo hí
 
 ## 🎨Layout
 
+### Desktop
+
+#### Login 
+<img src="/github/tela_login.png"/>
+
+#### Inicial 
+<img src="/github/tela_inicial.png"/>
+
+#### Reserva 
+<img src="/github/tela_reserva.png"/>
+
+#### Modal 
+<img src="/github/tela_modal_desktop.png"/>
+
+#### Agenda
+<img src="/github/tela_agenda.png"/>
+
+
+### Mobile
+
+#### Login 
+<img src="/github/tela_login_mobile.png"/>
+
+#### Inicial 
+<img src="/github/tela_initial_mobile.png"/>
+
+#### Agenda
+<img src="/github/tela_agenda_mobile.png"/>
+
+#### Reserva
+<img src="/github/tela_reserva_mobile.png"/>
+
 ---
 
 ## Como executar o projeto
