@@ -2,11 +2,10 @@
   display: none;
 }
 .title-page {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
   border-bottom: 2px solid #000;
   margin-bottom: 4.5rem;
-  margin-top: 8rem;
   padding-bottom: 0.8rem;
 }
 .title-desk {
