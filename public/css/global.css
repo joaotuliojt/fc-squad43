@@ -318,7 +318,7 @@ body {
     background: var(--primary-color);
   }
   .navigation-desktop a:hover {
-    transition: 0.25s;
+    transition: color 0.25s ease-in-out;
     color: var(--primary-color);
   }
 }
