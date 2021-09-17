@@ -1,4 +1,4 @@
-const DB_SCHEMA = "fcallendar_2";
+const DB_SCHEMA = "";
 const DB_USERNAME = "root"; //
 const DB_PASSWORD = "";
 
