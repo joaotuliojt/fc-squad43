@@ -80,6 +80,9 @@ DB_PASSWORD = (Senha do seu Banco de Dados)
 # Agora é só rodar!! No terminal na pasta do projeto digite:
 $ node index.js
 
+# Para ver a em seu navegador insira na url a porta 8080
+$ http://localhost:8080
+
 ```
 
 ## 🛠 Tecnologias
