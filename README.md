@@ -105,9 +105,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Utilitários:
 
-- <a href="https://www.figma.com">FIGMA</a> → <a href="https://www.figma.com/file/"> FCallendar - Squad43 </a>
-- <a href="https://trello.com"> Trello </a>
-- <a href="https://miro.com/app/=/"> Miro </a>
+- <a href="https://www.figma.com">FIGMA</a> → <a href="https://www.figma.com/file/rEAkTmit5afbY236vtsZRe/Fcamara---Squad-43?node-id=0%3A1"> FCallendar - Squad43 </a>
+- <a href="https://trello.com/b/bF7bfbub/squad-43"> Trello </a>
+- <a href="https://miro.com/app/board/o9J_lzKe1qI=/"> Miro </a>
 - <a href="https://www.behance.net/gallery/126887807/FCALLENDAR"> Behance </a>
 
 ## 👨‍💻 Protagonistas
