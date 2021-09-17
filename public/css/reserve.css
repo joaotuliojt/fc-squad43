@@ -50,7 +50,7 @@
 .modalDialog > div {
   width: 90%;
   position: relative;
-  height: 60vh;
+  height: 74vh;
   margin: 20% auto;
   padding: 0.8rem 1.6rem;
   border-radius: 1.2rem;
@@ -221,7 +221,7 @@
   #openModal > div {
     width: 50%;
     margin: 8% auto;
-    height: 60vh;
+    height: 70vh;
   }
 
   #openModal > div > img {
